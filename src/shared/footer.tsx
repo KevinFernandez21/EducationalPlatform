@@ -1,6 +1,14 @@
 function footer() {
   return (
-    <div>footer</div>
+    <div className="text-center">
+      <div>
+
+      </div>
+      
+      <div>
+        
+      </div>
+    </div>
   )
 }
 

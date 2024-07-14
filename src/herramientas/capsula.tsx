@@ -1,8 +1,10 @@
+import React from 'react'
 import preview from '../../data/preview.js'
-function aprende() {
+
+function capsula() {
   return (
     <div>
-      {preview.map((tema, index) => (
+      {previewData.map((tema, index) => (
         <div key={index}>
           <h1>{tema.tema_principal}</h1>
           {tema.resumen.map((item, idx) => (
@@ -12,9 +14,9 @@ function aprende() {
             </div>
           ))}
         </div>
-      ))}
+      ))}  
     </div>
   )
 }
 
-export default aprende
+export default capsula
