@@ -9,7 +9,7 @@ app = FastAPI()
 # Configuración de CORS
 origins = [
     "http://localhost:3000",  # React por defecto corre en el puerto 3000
-    "http://localhost:5173"   # Si estás usando Vite.js para React
+    "http://localhost:8000"   # Si estás usando Vite.js para React
 ]
 
 app.add_middleware(
@@ -41,4 +41,4 @@ def plot_function(input: FunctionInput):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=7000)
