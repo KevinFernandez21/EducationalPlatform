@@ -1,4 +1,4 @@
-const contenido =[
+/*const contenido =[
   {
     tema_principal: "Límites",
     demostraciones_clave: [
@@ -44,4 +44,4 @@ const contenido =[
       }
     ]
   }
-]
+]*/

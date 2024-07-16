@@ -23,11 +23,22 @@ ChartJS.register(
   Legend
 );
 
-const Graficas = () => {
-  const [functionInput, setFunctionInput] = useState('');
-  const [plotData, setPlotData] = useState(null);
+interface PlotData {
+  labels: number[];
+  datasets: {
+    label: string;
+    data: number[];
+    borderColor: string;
+    borderWidth: number;
+    fill: boolean;
+  }[];
+}
 
-  const handleSubmit = async (e) => {
+const Graficas = () => {
+  const [functionInput, setFunctionInput] = useState<string>('');
+  const [plotData, setPlotData] = useState<PlotData | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:8000/plot', { function: functionInput });

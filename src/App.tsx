@@ -1,7 +1,7 @@
 import Header from './shared/header'
 import Footer from './shared/footer'
 import Home from './pages/Home/home'
-import Aprende from './pages/Aprende/aprende'
+import Aprende from './pages/Aprende/Aprende'
 import Test from './pages/Test/Test'
 import './App.css'
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';

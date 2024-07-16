@@ -1,4 +1,3 @@
-import React from 'react';
 import Graficas from '../../shared/Graficas';  // Ajusta la ruta según la ubicación de tu archivo Graficas.js
 
 function Test(){
