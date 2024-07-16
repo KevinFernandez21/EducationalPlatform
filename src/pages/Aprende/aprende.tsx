@@ -1,4 +1,3 @@
-import React from 'react';
 import previewData from '../../data/preview.ts';
 
 interface ResumenItem {
