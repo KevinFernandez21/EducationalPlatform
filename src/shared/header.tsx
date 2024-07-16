@@ -11,11 +11,11 @@ function header() {
                 </a>
             </div>
             <div className="flex gap-2 border border-gray-200 rounded-full py-2 px-4 shadow-md shadow-gray-500">
-                <Link to='/'>Home</Link>
+                <Link to='/'>Inicio</Link>
                 <div className="border border-l border-gray-300"></div>
                 <Link to= '/Aprende'>Aprende!</Link>
                 <div className="border border-l border-gray-300"></div>
-                <Link to= '/Aprende'>Nosotros</Link>
+                <Link to= '/Test'>Nosotros</Link>
                 <div className="border border-l border-gray-300"></div>
                 <a href="">buscar</a>
                 <button className="p-1">

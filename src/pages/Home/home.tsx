@@ -1,5 +1,5 @@
 import holaImage from '../../assets/hola.png';
-import Carousel from '../../herramientas/carrousel';
+import Carousel from '../../shared/carrousel';
 function home() {
   return (
     <div className="items-center bg-black text-center">

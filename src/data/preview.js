@@ -40,18 +40,9 @@ const previewData = [
     tema_principal: "Derivadas",
     resumen: [
       {
-        titulo: "Concepto de Derivada",
-        contenido: "Definición y significado geométrico de la derivada."
+        titulo: "",
+        contenido: "Proximanente..."
       },
-      {
-        titulo: "Reglas de Derivación",
-        contenido: "Reglas básicas: suma, producto, cociente y regla de la cadena."
-      },
-      {
-        titulo: "Derivadas de Funciones Trigonométricas",
-        contenido: "Derivadas de seno, coseno, tangente y sus inversas."
-      },
-      // Agrega más secciones según sea necesario
     ]
   }
   // Puedes agregar más temas principales aquí
