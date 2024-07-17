@@ -1,4 +1,5 @@
 import previewData from '../../data/preview.ts';
+//import LimitesNotables from '../../shared/LimitesNotables.tsx';
 
 interface ResumenItem {
   titulo: string;
@@ -23,8 +24,10 @@ const Aprende: React.FC = () => {
             </div>
           ))}
         </div>
+        
       ))}
     </div>
+
   );
 };
 
