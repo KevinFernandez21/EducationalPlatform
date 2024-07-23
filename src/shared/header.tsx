@@ -10,7 +10,7 @@ function header() {
                     <span className="font-bold text-xl">CalcMaster</span>
                 </a>
             </div>
-            <div className="flex gap-2 border border-gray-200 rounded-full py-2 px-4 shadow-md shadow-gray-500">
+            <div className="gap-2 border border-gray-200 rounded-full py-2 px-4 shadow-md shadow-gray-500 hidden xl:flex">
                 <Link to='/'>Inicio</Link>
                 <div className="border border-l border-gray-300"></div>
                 <Link to= '/Aprende'>Aprende!</Link>
@@ -25,12 +25,12 @@ function header() {
                 </button>
             </div>
             <div  className="flex gap-2 border border-gray-200 rounded-full py-2 px-4 shadow-md shadow-gray-500">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 cursor-pointer">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                 </svg>
                 <div className="border border-l border-gray-300"></div>
                 <div className="bg-gray-500 text-white rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 p-1 cursor-pointer">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                     </svg>
                 </div>

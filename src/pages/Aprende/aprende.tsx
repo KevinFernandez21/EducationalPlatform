@@ -357,7 +357,7 @@ const Aprende: React.FC = () => {
         <h1 className="text-[30px] font-medium">Derivadas</h1>
         </div>
         <div>
-
+          <h3 className='text-[17px]'>Proximamente......</h3>
         </div>
       </div>
     </div>
