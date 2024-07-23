@@ -10,7 +10,7 @@ const Aprende: React.FC = () => {
   const expresiones5 = [`\\( \\lim_{{x \\to 2 }} (x+2)=4 \\)`,`\\( \\lim_{{x \\to 0 }} \\frac{sinx}{x} \\)`,`\\( \\lim_{{x \\to 0 }} \\frac{sinx}{x} = \\lim_{{x \\to 0 }} \\frac{cosx}{1} = 1 \\)`,`\\( \\lim_{{x \\to 0 }} \\frac{e^x-1}{x} \\)`,`\\( e^x \\)`,`\\( e^x\\approx 1 + x + \\frac{x^2}{2!}+.....\\)`,`\\(\\frac{e^x-1}{x} \\approx \\frac{1+x+\\frac{x^2}{2!}-1}{x} = \\frac{x+\\frac{x^2}{2!}}{x} = 1+ \\frac{x}{2!}\\)`,`\\(\\lim_{{x \\to 0}} (1+\\frac{x}{2!}) = 1\\)`,`\\(\\lim_{{x \\to 0}} \\frac{sin2x}{x} \\)`,`\\(\\frac{sin2x}{x}=2.\\frac{sin2x}{2x}\\)`,`\\(\\lim_{{x \\to 0}} \\frac{sinx}{x}\\)`,`\\(2\\lim_{{x \\to 0}} \\frac{sin2x}{2x} = 2 . 1 = 2\\)`]
   const expresiones6 = [`\\(f(x)\\leq g(x)\\leq h(x)\\)`,`\\(\\lim_{{x \\to a}} f(x) = \\lim_{{x \\to a}} h(x) = L \\)`,`\\(\\lim_{{x \\to a}} g(x) = L\\)`,`\\(\\lim_{{x \\to 0}} x^2 sin(\\frac{1}{x})\\)`,`\\(-1\\leq sin(\\frac{1}{x})\\leq 1 \\)`,`\\(-x^2 \\leq x^2sin(\\frac{1}{x})\\leq x^2\\)`,`\\(\\lim_{{x\\to0}}-x^2=0\\)`,`\\(\\lim_{{x\\to0}} x^2 = 0\\)`,`\\(\\lim_{{x\\to0}}x^2sin(\\frac{1}{x})=0\\)`,`\\(f\\)`,`\\([a,b]\\)`,`\\(f(x) = x^2 - x \\)`,`\\([0,2]\\)`,`\\(f(0)=0\\)`,`\\(f(2)=2\\)`,`\\(f'(x) = 2x-1\\)`,`\\(f'(x)=0\\)`,`\\(2x-1=0 \\Rightarrow x=\\frac{1}{2}\\)`,`\\(x=\\frac{1}{2}\\)`,`\\(f(\\frac{1}{2})=(\\frac{1}{2})^2-\\frac{1}{2}=\\frac{1}{4} -\\frac{1}{2} = - \\frac{1}{4}\\)`,`\\(-\\frac{1}{4}\\)`,`\\((a_n)\\)`,`\\(a_n=(-1)^n\\)`,`\\(|a_n|\\leq 1 \\)`,`\\(n\\)`,`\\(a_{2n} = 1\\)`,`\\(a_{2n+1}=-1\\)`]
   const expresiones7 = [`\\(x=a\\)`,`\\(f(a)\\)`,`\\(\\lim_{{x \\to a}} f(x) = f(a)\\)`,`\\(f(x) = x^2\\)`,`\\(x=2\\)`,`\\(f(2)=4\\)`,`\\(\\lim_{{x\\to 2}} x^2 = 4\\)`,`\\(f(2) = \\lim_{{x \\to 2}}x^2\\)`,`\\(f(x) = \\begin{cases}   \\frac{x^2-1}{x-1} & \\text{si } x \\neq 1 \\\\  2 & \\text{si } x = 1   \\end{cases}\\)`,`\\(\\lim_{{x \\to 1}} \\frac{x^2-1}{x-1} = \\lim_{{x\\to1}}\\frac{(x-1)(x+1)}{x-1}=\\lim_{{x\\to1}}(x+1)=2\\)`,`\\(\\lim_{{x\\to1}}f(x)=2\\)`,`\\(f(1)=2\\)`,`\\(x=1\\)`,`\\(f(x)=\\frac{1}{x-2}\\)`,`\\(\\lim_{{x\\to2^+}}=\\infty\\)`,`\\(\\lim_{{x\\to2^-}}\\frac{1}{x-2}=-\\infty\\)`,`\\(f(x) = \\begin{cases}  x+2 & \\text{si } x < 1 \\\\  x - 2 & \\text{si } x \\geq 1   \\end{cases}\\)`,`\\(\\lim_{{x\\to1^-}} f(x) = 3\\)`,`\\(\\lim_{{x\\to1^+}}f(x) = -1\\)`,`\\(x = 1\\)`]
-  const expresiones8 = [`\\(f'(a) = \\lim_{{h\\to0}} \\frac{f(a+h)-f(a)}{h}\\)`,`\\(f(x)=x^2\\)`,`\\(f'(a)= \\lim_{{h\\to0}} \\frac{f(a+h)-f(a)}{h} = \\lim_{{h\\to0}}\\frac{a^2+2ah+h^2-a^2}{h} = \\lim_{{h\\to0}}\\frac{2ah+h^2}{h}=\\lim_{{h\\to0}} 2a\\)`,`\\(f'(x) = 2x\\)`,`\\(\\int_{a}^{b} f(x)\\,dx = \\lim_{{n\\to\\infty}}\\sum_{i=i}^{n} f(x_{i}^{*})\\Delta x\\)`,`\\(\\int_{1}^{0} x^2\\,dx\\)`,`\\(\\Delta x = \\frac{b-a}{n}\\)`,`\\(x_{i}^{*}\\)`,`\\(\\int_{1}^{2} \\,dx = \\lim_{{x\\to\\infty}} \\sum_{i=1}^{n} (\\frac{i}{n})^2 . \\frac{1}{n} = \\lim_{{n\\to\\infty}}\\frac{1}{n^3} \\sum_{i=i}^{n} i^2\\)`,`\\(\\sum_{i=1}^{n}i^2=\\frac{n(n+1)(2n+1))}{6}\\)`,`\\(\\int_{1}^{0}x^2\\,dx = \\lim_{{x\\to\\infty}} \\frac{1}{n^3} . \\frac{n(n+1)(2n+1)}{6}=\\lim_{{x\\to\\infty}} \\frac{(n+1)(2n+1)}{6n^2} = \\frac{1}{3}\\)`,`\\(S=\\sum_{n=1}^{\\infty} a_n = \\lim_{{x\\to\\infty}} \\sum_{n=1}^{N} a_n\\)`,`\\(\\sum_{n=0}^{\\infty} r^n\\)`,`\\(|r|<1\\)`,`\\(\\sum_{n=0}^{\\infty} r^n = \\frac{1}{1-r}\\)`,`\\(r=\\frac{1}{2}\\)`,`\\(\\sum_{n=0}^{\\infty} (frac{1}{2})^2 = \\frac{1}{1-\\frac{1}{2}}=2\\)`]
+  const expresiones8 = [`\\(f'(a) = \\lim_{{h\\to0}} \\frac{f(a+h)-f(a)}{h}\\)`,`\\(f(x)=x^2\\)`,`\\(f'(a)= \\lim_{{h\\to0}} \\frac{f(a+h)-f(a)}{h} = \\lim_{{h\\to0}}\\frac{a^2+2ah+h^2-a^2}{h} = \\lim_{{h\\to0}}\\frac{2ah+h^2}{h}=\\lim_{{h\\to0}} 2a\\)`,`\\(f'(x) = 2x\\)`,`\\(x=b\\)`,`\\(\\int_{a}^{b} f(x)\\,dx = \\lim_{{n\\to\\infty}}\\sum_{i=i}^{n} f(x_{i}^{*})\\Delta x\\)`,`\\(\\int_{1}^{0} x^2\\,dx\\)`,`\\(\\Delta x = \\frac{b-a}{n}\\)`,`\\(x_{i}^{*}\\)`,`\\(\\int_{1}^{2} \\,dx = \\lim_{{x\\to\\infty}} \\sum_{i=1}^{n} (\\frac{i}{n})^2 . \\frac{1}{n} = \\lim_{{n\\to\\infty}}\\frac{1}{n^3} \\sum_{i=i}^{n} i^2\\)`,`\\(\\sum_{i=1}^{n}i^2=\\frac{n(n+1)(2n+1))}{6}\\)`,`\\(\\int_{1}^{0}x^2\\,dx = \\lim_{{x\\to\\infty}} \\frac{1}{n^3} . \\frac{n(n+1)(2n+1)}{6}=\\lim_{{x\\to\\infty}} \\frac{(n+1)(2n+1)}{6n^2} = \\frac{1}{3}\\)`,`\\(S=\\sum_{n=1}^{\\infty} a_n = \\lim_{{x\\to\\infty}} \\sum_{n=1}^{N} a_n\\)`,`\\(\\sum_{n=0}^{\\infty} r^n\\)`,`\\(|r|<1\\)`,`\\(\\sum_{n=0}^{\\infty} r^n = \\frac{1}{1-r}\\)`,`\\(r=\\frac{1}{2}\\)`,`\\(\\sum_{n=0}^{\\infty} (\\frac{1}{2})^n = \\frac{1}{1-\\frac{1}{2}}=2\\)`]
   return (
     <div className='p-5'>
       <div>
@@ -312,40 +312,53 @@ const Aprende: React.FC = () => {
             <h3 className="text-[22px] font-semibold">Aplicaciones en Derivadas, Integrales y Series Infinitas.</h3>
             <div>
               <h3 className='text-[19px] font-semibold'>Derivadas</h3>
-              <h3 className='text-[17px]'>Las derivadas se definen a través del concepto de límite. La derivada de una función </h3>
-              <h3 className='text-[17px]'>Ejemplos:</h3>
-              <h3 className='text-[17px]'><Latex>{expresiones5[8]}</Latex></h3>
-              <h3 className='text-[17px]'>Simplificamos la fración:</h3>
-              <h3 className='text-[17px]'><Latex>{expresiones5[9]}</Latex></h3>
-              <h3 className='text-[17px]'>Sabemos que <Latex>{expresiones5[10]}</Latex>, por lo tanto:</h3>
-              <h3 className='text-[17px]'><Latex>{expresiones5[11]}</Latex></h3>
+              <h3 className='text-[17px]'>Las derivadas se definen a través del concepto de límite. La derivada de una función <Latex>{expresiones[1]}</Latex> en un punto <Latex>{expresiones7[0]}</Latex> mide la tasa de cambio instantánea de la función en ese punto y se define como el límite de la razón de cambio promedio cuando el intervalo de cambio se hace infinitesimalmente pequeño.</h3>
+              <h3 className='text-[17px]'>Definición de la derivada:</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[0]}</Latex></h3>
+              <h3 className='text-[17px]'>Ejemplo:</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[1]}</Latex></h3>
+              <h3 className='text-[17px]'>La derivada de <Latex>{expresiones[1]}</Latex> en <Latex>{expresiones7[0]}</Latex> es:</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[2]}</Latex></h3>
+              <h3 className='text-[15px]'>Por lo tanto, la derivada de <Latex>{expresiones8[1]}</Latex> es <Latex>{expresiones8[3]}</Latex>.</h3>
             </div>
             <div>
               <h3 className='text-[19px] font-semibold'>Integrales</h3>
-              <h3 className='text-[17px]'>Las integrales también se definen utilizando el concepto de límite. La integral definida de una función <Latex>{expresiones[1]}</Latex> sobre un intervalo <Latex>{expresiones[1]}</Latex></h3>
-              <h3 className='text-[17px]'>Ejemplos:</h3>
-              <h3 className='text-[17px]'><Latex>{expresiones5[8]}</Latex></h3>
-              <h3 className='text-[17px]'>Simplificamos la fración:</h3>
-              <h3 className='text-[17px]'><Latex>{expresiones5[9]}</Latex></h3>
-              <h3 className='text-[17px]'>Sabemos que <Latex>{expresiones5[10]}</Latex>, por lo tanto:</h3>
-              <h3 className='text-[17px]'><Latex>{expresiones5[11]}</Latex></h3>
+              <h3 className='text-[17px]'>Las integrales también se definen utilizando el concepto de límite. La integral definida de una función <Latex>{expresiones[1]}</Latex> sobre un intervalo <Latex>{expresiones6[10]}</Latex> representa el área bajo la curva de <Latex>{expresiones[1]}</Latex> entre <Latex>{expresiones7[0]}</Latex> y <Latex>{expresiones8[4]}</Latex>, y se define como el límite de un suma de Rieman.</h3>
+              <h3 className='text-[17px]'>Definición de la integral definida:</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[5]}</Latex></h3>
+              <h3 className='text-[17px]'>donde <Latex>{expresiones8[7]}</Latex> y <Latex>{expresiones8[8]}</Latex> es un punto en el i-ésimo subintervalo.</h3>
+              <h3 className='text-[17px]'>Ejemplo</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[6]}</Latex></h3>
+              <h3 className='text-[17px]'>Usamos la definición de suma de Riemann:</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[9]}</Latex></h3>
+              <h3 className='text-[17px]'>Usando la fórmula de la suma de cuadrados</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[10]}</Latex></h3>
+              <h3 className='text-[17px]'>Entonces:</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[11]}</Latex></h3>
             </div>
             <div>
               <h3 className='text-[19px] font-semibold'>Series infinitas</h3>
-              <h3 className='text-[17px]'>A veces, simplificar la expresión algebraica puedo resolver la indeterminación.</h3>
-              <h3 className='text-[17px]'>Ejemplos:</h3>
-              <h3 className='text-[17px]'><Latex>{expresiones5[8]}</Latex></h3>
-              <h3 className='text-[17px]'>Simplificamos la fración:</h3>
-              <h3 className='text-[17px]'><Latex>{expresiones5[9]}</Latex></h3>
-              <h3 className='text-[17px]'>Sabemos que <Latex>{expresiones5[10]}</Latex>, por lo tanto:</h3>
-              <h3 className='text-[17px]'><Latex>{expresiones5[11]}</Latex></h3>
+              <h3 className='text-[17px]'>Las series infinitas se definen como la suma de los términos de una sucesión infinita y su valor se determina usando límites. Una serie infinita converge a un valor S si la sucesión de susmas parciales a S a medida que el número de términos aumenta indefinidamente.</h3>
+              <h3 className='text-[17px]'>Definición de serie infinita:</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[12]}</Latex></h3>
+              <h3 className='text-[17px]'>Ejemplo:</h3>
+              <h3 className='text-[17px]'>La serie geométrica:</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[13]}</Latex></h3>
+              <h3 className='text-[17px]'>Converge <Latex>{expresiones8[14]}</Latex>, y su suma es:</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[15]}</Latex></h3>
+              <h3 className='text-[17px]'>Para <Latex>{expresiones8[16]}</Latex>:</h3>
+              <h3 className='text-[17px]'><Latex>{expresiones8[17]}</Latex></h3>
             </div>
           </div>
         </div>
       </div>
       <div>
+        <div>
         <h1 className="text-[30px] font-medium">Derivadas</h1>
-        <h2 className="text-[20px]"></h2>
+        </div>
+        <div>
+
+        </div>
       </div>
     </div>
 
