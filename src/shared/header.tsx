@@ -39,9 +39,9 @@ function Header() {
             </svg>
             <div className={`absolute top-14 right-0 m-2  px-4 bg-white shadow-md shadow-gray-500 border-gray-200 rounded-xl transition-all duration-300 ease-in-out ${show ?"":"top-[-400px]"}`}>
                 <ul className="py-3">
-                    <li className="text-[20px]">Libros</li>
-                    <li className="text-[20px] mt-2">Practica</li>
-                    <li className="text-[20px] mt-2">¿Quienes Somos?</li>
+                    <li className="text-[20px]"><Link to={'/Books'}>Libros</Link></li>
+                    <li className="text-[20px] mt-2"><Link to={'/Practica'}>Practica</Link></li>
+                    <li className="text-[20px] mt-2"><Link to={'/nosotros'}>¿Quienes Somos?</Link></li>
                 </ul>
             </div>
             <div className="border border-l border-gray-300"></div>
