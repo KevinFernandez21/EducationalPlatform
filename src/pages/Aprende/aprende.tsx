@@ -45,10 +45,6 @@ const Aprende: React.FC = () => {
     setIsOpen9(!isOpen9);
   };
 
-
-
-
-
   const expresiones = [`\\(\\epsilon - \\delta\\)`,`\\( f(x) \\)`,`\\( a \\)`,`\\( L \\)`,`\\( x \\)`,`\\( \\lim_{{x \\to a}} f(x) = L \\)`,`\\(\\epsilon > 0\\)`,`\\(\\delta > 0\\)`,`\\(0 < |x - a| < \\delta\\)`,`\\(|f(x) - L| < \\epsilon\\)`,`\\( \\lim_{{x \\to 3}} f(2x + 1) = 7 \\)`,`\\( 2x + 1\\)`,`\\( \\lim_{{x \\to \\infty}} \\frac{1}{x} = 0\\)`,`\\(\\frac{1}{x}\\)`,`\\( \\lim_{{x \\to \\infty}} f(3x^2+2x + 1) = \\infty \\)`,`\\(3x^2 + 2x + 1\\)`]
   const expresiones1 = [`\\( \\lim_{{x \\to 3}} f(2x + 1) = 2(3) + 1 = 7 \\)`,`\\(\\frac{0}{0}\\)`,`\\( \\lim_{{x \\to 2}} \\frac{x^2-4}{x-2}\\)`,`\\(\\frac{x^2-4}{x-2} = \\frac{(x-2)(x+2)}{x-2}\\)`,`\\( \\lim_{{x+2 \\to 2}} = 2 + 2 = 4\\)`,`\\( \\lim_{{x+2 \\to 0}} \\frac{\\sqrt{x+1} - 1}{x}\\)`,`\\(\\frac{\\sqrt{x+1} - 1}{x} . \\frac{\\sqrt{x+1} + 1}{\\sqrt{x+1} + 1} = \\frac{(\\sqrt{x+1} - 1)(\\sqrt{x+1} + 1)}{x(\\sqrt{x + 1} + 1)} \\)`,`\\(\\frac{x-1+1}{x(\\sqrt{x + 1} + 1)}  = \\frac{x}{x(\\sqrt{x + 1} + 1)} = \\frac{1}{\\sqrt{x+1}+1} \\)`,`\\(\\lim_{{x \\to 0}}\\frac{1}{\\sqrt{x + 1} + 1}  = \\frac{1}{\\sqrt{0 + 1} + 1} = \\frac{1}{2} \\)`]
   const expresiones2 = [`\\( \\lim_{{x \\to a}} g(x) = M \\)`,`\\( \\lim_{{x\\to a}} f(x) + g(x) = L + M \\)`,`\\( \\lim_{{x\\to 2}}(3x+4) + \\lim_{{x\\to 2}} (2x-1) = (3(2)+4)+(2(2)-1)= 10 + 3 = 13 \\)`,`\\( \\lim_{{x\\to a}} f(x) - g(x) = L - M \\)`,`\\( \\lim_{{x\\to 3}}(x^2 - 4x) - \\lim_{{x\\to 3}} (x-1) = ((3)^2-4(3))-(3-1)= (9-12)-2 = -5 \\)`,`\\( \\lim_{{x\\to a}} f(x) . g(x) = L . M \\)`,`\\( \\lim_{{x\\to 1}}(x^2) . \\lim_{{x\\to 1}} (2x+3) = ((1)^2.(2(1)+3)= 1 . 5 = 5 \\)`,`\\( M \\neq 0 \\)`,`\\( \\lim_{{x\\to a}} \\frac{f(x)}{g(x)} = \\frac{L}{M} \\)`,`\\( \\lim_{{x\\to 1}}\\frac{x^2-1}{x-1}  = \\frac{(2)^2-1}{2-1} = \\frac{4-1}{1} = \\frac{3}{1} = 3 \\)`]
@@ -58,6 +54,7 @@ const Aprende: React.FC = () => {
   const expresiones6 = [`\\(f(x)\\leq g(x)\\leq h(x)\\)`,`\\(\\lim_{{x \\to a}} f(x) = \\lim_{{x \\to a}} h(x) = L \\)`,`\\(\\lim_{{x \\to a}} g(x) = L\\)`,`\\(\\lim_{{x \\to 0}} x^2 sin(\\frac{1}{x})\\)`,`\\(-1\\leq sin(\\frac{1}{x})\\leq 1 \\)`,`\\(-x^2 \\leq x^2sin(\\frac{1}{x})\\leq x^2\\)`,`\\(\\lim_{{x\\to0}}-x^2=0\\)`,`\\(\\lim_{{x\\to0}} x^2 = 0\\)`,`\\(\\lim_{{x\\to0}}x^2sin(\\frac{1}{x})=0\\)`,`\\(f\\)`,`\\([a,b]\\)`,`\\(f(x) = x^2 - x \\)`,`\\([0,2]\\)`,`\\(f(0)=0\\)`,`\\(f(2)=2\\)`,`\\(f'(x) = 2x-1\\)`,`\\(f'(x)=0\\)`,`\\(2x-1=0 \\Rightarrow x=\\frac{1}{2}\\)`,`\\(x=\\frac{1}{2}\\)`,`\\(f(\\frac{1}{2})=(\\frac{1}{2})^2-\\frac{1}{2}=\\frac{1}{4} -\\frac{1}{2} = - \\frac{1}{4}\\)`,`\\(-\\frac{1}{4}\\)`,`\\((a_n)\\)`,`\\(a_n=(-1)^n\\)`,`\\(|a_n|\\leq 1 \\)`,`\\(n\\)`,`\\(a_{2n} = 1\\)`,`\\(a_{2n+1}=-1\\)`]
   const expresiones7 = [`\\(x=a\\)`,`\\(f(a)\\)`,`\\(\\lim_{{x \\to a}} f(x) = f(a)\\)`,`\\(f(x) = x^2\\)`,`\\(x=2\\)`,`\\(f(2)=4\\)`,`\\(\\lim_{{x\\to 2}} x^2 = 4\\)`,`\\(f(2) = \\lim_{{x \\to 2}}x^2\\)`,`\\(f(x) = \\begin{cases}   \\frac{x^2-1}{x-1} & \\text{si } x \\neq 1 \\\\  2 & \\text{si } x = 1   \\end{cases}\\)`,`\\(\\lim_{{x \\to 1}} \\frac{x^2-1}{x-1} = \\lim_{{x\\to1}}\\frac{(x-1)(x+1)}{x-1}=\\lim_{{x\\to1}}(x+1)=2\\)`,`\\(\\lim_{{x\\to1}}f(x)=2\\)`,`\\(f(1)=2\\)`,`\\(x=1\\)`,`\\(f(x)=\\frac{1}{x-2}\\)`,`\\(\\lim_{{x\\to2^+}}=\\infty\\)`,`\\(\\lim_{{x\\to2^-}}\\frac{1}{x-2}=-\\infty\\)`,`\\(f(x) = \\begin{cases}  x+2 & \\text{si } x < 1 \\\\  x - 2 & \\text{si } x \\geq 1   \\end{cases}\\)`,`\\(\\lim_{{x\\to1^-}} f(x) = 3\\)`,`\\(\\lim_{{x\\to1^+}}f(x) = -1\\)`,`\\(x = 1\\)`]
   const expresiones8 = [`\\(f'(a) = \\lim_{{h\\to0}} \\frac{f(a+h)-f(a)}{h}\\)`,`\\(f(x)=x^2\\)`,`\\(f'(a)= \\lim_{{h\\to0}} \\frac{f(a+h)-f(a)}{h} = \\lim_{{h\\to0}}\\frac{a^2+2ah+h^2-a^2}{h} = \\lim_{{h\\to0}}\\frac{2ah+h^2}{h}=\\lim_{{h\\to0}} 2a\\)`,`\\(f'(x) = 2x\\)`,`\\(x=b\\)`,`\\(\\int_{a}^{b} f(x)\\,dx = \\lim_{{n\\to\\infty}}\\sum_{i=i}^{n} f(x_{i}^{*})\\Delta x\\)`,`\\(\\int_{1}^{0} x^2\\,dx\\)`,`\\(\\Delta x = \\frac{b-a}{n}\\)`,`\\(x_{i}^{*}\\)`,`\\(\\int_{1}^{2} \\,dx = \\lim_{{x\\to\\infty}} \\sum_{i=1}^{n} (\\frac{i}{n})^2 . \\frac{1}{n} = \\lim_{{n\\to\\infty}}\\frac{1}{n^3} \\sum_{i=i}^{n} i^2\\)`,`\\(\\sum_{i=1}^{n}i^2=\\frac{n(n+1)(2n+1))}{6}\\)`,`\\(\\int_{1}^{0}x^2\\,dx = \\lim_{{x\\to\\infty}} \\frac{1}{n^3} . \\frac{n(n+1)(2n+1)}{6}=\\lim_{{x\\to\\infty}} \\frac{(n+1)(2n+1)}{6n^2} = \\frac{1}{3}\\)`,`\\(S=\\sum_{n=1}^{\\infty} a_n = \\lim_{{x\\to\\infty}} \\sum_{n=1}^{N} a_n\\)`,`\\(\\sum_{n=0}^{\\infty} r^n\\)`,`\\(|r|<1\\)`,`\\(\\sum_{n=0}^{\\infty} r^n = \\frac{1}{1-r}\\)`,`\\(r=\\frac{1}{2}\\)`,`\\(\\sum_{n=0}^{\\infty} (\\frac{1}{2})^n = \\frac{1}{1-\\frac{1}{2}}=2\\)`]
+  
   return (
     <div className='p-5 z-[-1]'>
       <div className='xl:px-40 px-2'>
@@ -461,7 +458,6 @@ const Aprende: React.FC = () => {
         </div>
       </div>
     </div>
-
   );
 };
 export default Aprende;

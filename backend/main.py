@@ -9,7 +9,9 @@ app = FastAPI()
 # Configuración de CORS
 origins = [
     "http://localhost:3000",  # React por defecto corre en el puerto 3000
-    "http://localhost:8000"   # Si estás usando Vite.js para React
+    "http://localhost:8000",  # Si estás usando Vite.js para React
+    "https://educational-platform-7iadmkhae-kevin-fernandezs-projects.vercel.app",  # Tu aplicación desplegada en Vercel
+    "https://intellectual-corrinne-orangecorp-fd76069e.koyeb.app"  # Tu backend desplegado en Koyeb (si se accede desde frontend)
 ]
 
 app.add_middleware(
