@@ -2,8 +2,14 @@ import { Link } from "react-router-dom"
 import { useState } from 'react';
 function Header() {
     const [show, setShow] = useState(false)
+    const [show1, setShow1] = useState(false)
     const toggle = () => {
         setShow(!show);
+        setShow1(false);
+    };
+    const toggle1 = () => {
+        setShow1(!show1);
+        setShow(false);
     };
     return (
         <div className="p-4 flex justify-between overflow-x-hidden z-10">
@@ -31,9 +37,10 @@ function Header() {
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 cursor-pointer" onClick={toggle}>
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                 </svg>
-                <div className={`absolute top-14 right-0 m-2  px-4 bg-white shadow-md shadow-gray-500 border-gray-200 rounded-xl ${show ?"":"top-[-200px]"}`}>
+                <div className={`absolute top-14 right-0 m-2  px-4 bg-white shadow-md shadow-gray-500 border-gray-200 rounded-xl transition-all duration-300 ease-in-out ${show ?"":"top-[-400px]"}`}>
                     <ul className="py-3">
                         <li className="text-[20px]">Libros</li>
+                        <li className="text-[20px] mt-2">Practica</li>
                         <li className="text-[20px] mt-2">referencias</li>
                         <li className="text-[20px] mt-2">Repositorio</li>
                         <li className="text-[20px] mt-2">¿Quienes Somos?</li>
@@ -41,9 +48,21 @@ function Header() {
                 </div>
                 <div className="border border-l border-gray-300"></div>
                 <div className="bg-gray-500 text-white rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 p-1 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 p-1 cursor-pointer" onClick={toggle1}>
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                     </svg>
+                </div>
+                <div className={`absolute top-14 right-0 m-2  px-4 bg-white shadow-md shadow-gray-500 border-gray-200 rounded-xl transition-all duration-300 ease-in-out ${show1 ?"":"top-[-400px]"}`}>
+                    <ul className="py-3 text-center">
+                        <li className="text-[20px] bg-gray-500 text-white flex justify-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-15 p-1 cursor-pointer" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                            </svg>
+                        </li>
+                        <li className="text-[20px] mt-2">Mi cuenta</li>
+                        <li className="text-[20px] mt-2">Registro</li>
+                        <li className="text-[20px] mt-2">Cerrar sesion</li>
+                    </ul>
                 </div>
             </div>
         </div>

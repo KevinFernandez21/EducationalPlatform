@@ -61,7 +61,7 @@ const Graficas = () => {
   };
 
   return (
-    <div className="App">
+    <div className="text-center w-[500px] ">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
