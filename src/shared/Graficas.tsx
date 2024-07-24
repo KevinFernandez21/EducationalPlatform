@@ -41,7 +41,7 @@ const Graficas = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:7000/plot', { function: functionInput });
+      const response = await axios.post('https://intellectual-corrinne-orangecorp-fd76069e.koyeb.app/plot', { function: functionInput });
       const { x_vals, y_vals, latex } = response.data;
       setPlotData({
         labels: x_vals,
