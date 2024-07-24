@@ -49,7 +49,7 @@ const Graficas = () => {
           {
             label: `f(x) = ${latex}`,
             data: y_vals,
-            borderColor: 'orange',
+            borderColor: 'black',
             borderWidth: 2,
             fill: false,
           },

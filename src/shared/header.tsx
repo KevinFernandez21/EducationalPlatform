@@ -41,8 +41,6 @@ function Header() {
                 <ul className="py-3">
                     <li className="text-[20px]">Libros</li>
                     <li className="text-[20px] mt-2">Practica</li>
-                    <li className="text-[20px] mt-2">referencias</li>
-                    <li className="text-[20px] mt-2">Repositorio</li>
                     <li className="text-[20px] mt-2">¿Quienes Somos?</li>
                 </ul>
             </div>
