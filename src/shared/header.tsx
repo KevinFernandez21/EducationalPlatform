@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom"
-function header() {
+import { useState } from 'react';
+function Header() {
+    const [show, setShow] = useState(false)
+    const toggle = () => {
+        setShow(!show);
+    };
     return (
-        <div className="p-4 flex justify-between">
+        <div className="p-4 flex justify-between overflow-x-hidden z-10">
             <div>
                 <a href="" className="flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
@@ -15,8 +20,6 @@ function header() {
                 <div className="border border-l border-gray-300"></div>
                 <Link to= '/Aprende'>Aprende!</Link>
                 <div className="border border-l border-gray-300"></div>
-                <Link to= '/Test'>Nosotros</Link>
-                <div className="border border-l border-gray-300"></div>
                 <a href="">buscar</a>
                 <button className="p-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-4 h-4">
@@ -25,9 +28,17 @@ function header() {
                 </button>
             </div>
             <div  className="flex gap-2 border border-gray-200 rounded-full py-2 px-4 shadow-md shadow-gray-500">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 cursor-pointer" onClick={toggle}>
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                 </svg>
+                <div className={`absolute top-14 right-0 m-2  px-4 bg-white shadow-md shadow-gray-500 border-gray-200 rounded-xl ${show ?"":"top-[-200px]"}`}>
+                    <ul className="py-3">
+                        <li className="text-[20px]">Libros</li>
+                        <li className="text-[20px] mt-2">referencias</li>
+                        <li className="text-[20px] mt-2">Repositorio</li>
+                        <li className="text-[20px] mt-2">¿Quienes Somos?</li>
+                    </ul>
+                </div>
                 <div className="border border-l border-gray-300"></div>
                 <div className="bg-gray-500 text-white rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 p-1 cursor-pointer">
@@ -38,4 +49,4 @@ function header() {
         </div>
     )
 }
-export default header
+export default Header

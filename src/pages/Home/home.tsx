@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import holaImage from '../../assets/hola.png';
 import Carousel from '../../shared/carrousel';
 function home() {
@@ -7,9 +8,12 @@ function home() {
         <h1 className="p-4 text-[40px] text-white py-6 font-bold"> Aprende de manera intuitiva </h1>
         <div  className="w-full py-5  bg-white rounded-t-full flex items-center justify-center flex-col">
           <img src={holaImage} alt="hola.png" />
-          <button className="bg-slate-600 p-4 rounded-xl font-semibold text-white m-3">
-            Empiza aprender
-          </button>
+          <Link to= '/Aprende'>
+            <button className="bg-slate-600 p-4 rounded-xl font-semibold text-white m-3">
+              Empiza aprender
+            </button>
+          </Link>
+          
         </div>
       </div>
       <div className="bg-white">
