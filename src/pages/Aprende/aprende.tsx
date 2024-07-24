@@ -1,7 +1,54 @@
+import React, { useState } from 'react';
 import 'katex/dist/katex.min.css';
 import Latex from 'react-latex-next';
 
 const Aprende: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
+  const [isOpen4, setIsOpen4] = useState(false);
+  const [isOpen5, setIsOpen5] = useState(false);
+  const [isOpen6, setIsOpen6] = useState(false);
+  const [isOpen7, setIsOpen7] = useState(false);
+  const [isOpen8, setIsOpen8] = useState(false);
+  const [isOpen9, setIsOpen9] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+  const toggle1 = () => {
+    setIsOpen1(!isOpen1);
+  };
+  const toggle2 = () => {
+    setIsOpen2(!isOpen2);
+  };
+  const toggle3 = () => {
+    setIsOpen3(!isOpen3);
+  };
+  const toggle4 = () => {
+    setIsOpen4(!isOpen4);
+  };
+  const toggle5 = () => {
+    setIsOpen5(!isOpen5);
+  };
+  const toggle6 = () => {
+    setIsOpen6(!isOpen6);
+  };
+  const toggle7 = () => {
+    setIsOpen7(!isOpen7);
+  };
+  const toggle8 = () => {
+    setIsOpen8(!isOpen8);
+  };
+  const toggle9 = () => {
+    setIsOpen9(!isOpen9);
+  };
+
+
+
+
+
   const expresiones = [`\\(\\epsilon - \\delta\\)`,`\\( f(x) \\)`,`\\( a \\)`,`\\( L \\)`,`\\( x \\)`,`\\( \\lim_{{x \\to a}} f(x) = L \\)`,`\\(\\epsilon > 0\\)`,`\\(\\delta > 0\\)`,`\\(0 < |x - a| < \\delta\\)`,`\\(|f(x) - L| < \\epsilon\\)`,`\\( \\lim_{{x \\to 3}} f(2x + 1) = 7 \\)`,`\\( 2x + 1\\)`,`\\( \\lim_{{x \\to \\infty}} \\frac{1}{x} = 0\\)`,`\\(\\frac{1}{x}\\)`,`\\( \\lim_{{x \\to \\infty}} f(3x^2+2x + 1) = \\infty \\)`,`\\(3x^2 + 2x + 1\\)`]
   const expresiones1 = [`\\( \\lim_{{x \\to 3}} f(2x + 1) = 2(3) + 1 = 7 \\)`,`\\(\\frac{0}{0}\\)`,`\\( \\lim_{{x \\to 2}} \\frac{x^2-4}{x-2}\\)`,`\\(\\frac{x^2-4}{x-2} = \\frac{(x-2)(x+2)}{x-2}\\)`,`\\( \\lim_{{x+2 \\to 2}} = 2 + 2 = 4\\)`,`\\( \\lim_{{x+2 \\to 0}} \\frac{\\sqrt{x+1} - 1}{x}\\)`,`\\(\\frac{\\sqrt{x+1} - 1}{x} . \\frac{\\sqrt{x+1} + 1}{\\sqrt{x+1} + 1} = \\frac{(\\sqrt{x+1} - 1)(\\sqrt{x+1} + 1)}{x(\\sqrt{x + 1} + 1)} \\)`,`\\(\\frac{x-1+1}{x(\\sqrt{x + 1} + 1)}  = \\frac{x}{x(\\sqrt{x + 1} + 1)} = \\frac{1}{\\sqrt{x+1}+1} \\)`,`\\(\\lim_{{x \\to 0}}\\frac{1}{\\sqrt{x + 1} + 1}  = \\frac{1}{\\sqrt{0 + 1} + 1} = \\frac{1}{2} \\)`]
   const expresiones2 = [`\\( \\lim_{{x \\to a}} g(x) = M \\)`,`\\( \\lim_{{x\\to a}} f(x) + g(x) = L + M \\)`,`\\( \\lim_{{x\\to 2}}(3x+4) + \\lim_{{x\\to 2}} (2x-1) = (3(2)+4)+(2(2)-1)= 10 + 3 = 13 \\)`,`\\( \\lim_{{x\\to a}} f(x) - g(x) = L - M \\)`,`\\( \\lim_{{x\\to 3}}(x^2 - 4x) - \\lim_{{x\\to 3}} (x-1) = ((3)^2-4(3))-(3-1)= (9-12)-2 = -5 \\)`,`\\( \\lim_{{x\\to a}} f(x) . g(x) = L . M \\)`,`\\( \\lim_{{x\\to 1}}(x^2) . \\lim_{{x\\to 1}} (2x+3) = ((1)^2.(2(1)+3)= 1 . 5 = 5 \\)`,`\\( M \\neq 0 \\)`,`\\( \\lim_{{x\\to a}} \\frac{f(x)}{g(x)} = \\frac{L}{M} \\)`,`\\( \\lim_{{x\\to 1}}\\frac{x^2-1}{x-1}  = \\frac{(2)^2-1}{2-1} = \\frac{4-1}{1} = \\frac{3}{1} = 3 \\)`]
@@ -13,31 +60,30 @@ const Aprende: React.FC = () => {
   const expresiones8 = [`\\(f'(a) = \\lim_{{h\\to0}} \\frac{f(a+h)-f(a)}{h}\\)`,`\\(f(x)=x^2\\)`,`\\(f'(a)= \\lim_{{h\\to0}} \\frac{f(a+h)-f(a)}{h} = \\lim_{{h\\to0}}\\frac{a^2+2ah+h^2-a^2}{h} = \\lim_{{h\\to0}}\\frac{2ah+h^2}{h}=\\lim_{{h\\to0}} 2a\\)`,`\\(f'(x) = 2x\\)`,`\\(x=b\\)`,`\\(\\int_{a}^{b} f(x)\\,dx = \\lim_{{n\\to\\infty}}\\sum_{i=i}^{n} f(x_{i}^{*})\\Delta x\\)`,`\\(\\int_{1}^{0} x^2\\,dx\\)`,`\\(\\Delta x = \\frac{b-a}{n}\\)`,`\\(x_{i}^{*}\\)`,`\\(\\int_{1}^{2} \\,dx = \\lim_{{x\\to\\infty}} \\sum_{i=1}^{n} (\\frac{i}{n})^2 . \\frac{1}{n} = \\lim_{{n\\to\\infty}}\\frac{1}{n^3} \\sum_{i=i}^{n} i^2\\)`,`\\(\\sum_{i=1}^{n}i^2=\\frac{n(n+1)(2n+1))}{6}\\)`,`\\(\\int_{1}^{0}x^2\\,dx = \\lim_{{x\\to\\infty}} \\frac{1}{n^3} . \\frac{n(n+1)(2n+1)}{6}=\\lim_{{x\\to\\infty}} \\frac{(n+1)(2n+1)}{6n^2} = \\frac{1}{3}\\)`,`\\(S=\\sum_{n=1}^{\\infty} a_n = \\lim_{{x\\to\\infty}} \\sum_{n=1}^{N} a_n\\)`,`\\(\\sum_{n=0}^{\\infty} r^n\\)`,`\\(|r|<1\\)`,`\\(\\sum_{n=0}^{\\infty} r^n = \\frac{1}{1-r}\\)`,`\\(r=\\frac{1}{2}\\)`,`\\(\\sum_{n=0}^{\\infty} (\\frac{1}{2})^n = \\frac{1}{1-\\frac{1}{2}}=2\\)`]
   return (
     <div className='p-5'>
-      <div className='px-40'>
-        <div className='bg-black text-white py-4 px-4 justify-between flex items-center'>
+      <div className='xl:px-40 px-2'>
+        <div className='bg-black text-white py-4 px-4 justify-between flex items-center cursor-pointer' onClick={toggle}>
           <h1 className="text-[35px] font-medium">Limites</h1>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out ${isOpen ? "transform rotate-180":"transform rotate-0"}`} onClick={toggle}>
             <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
           </svg>
         </div>
-        <div className='border-2 shadow-md shadow-gray-500'>
+        <div className={`border-2 shadow-md shadow-gray-500 transition-all duration-300 ease-in-out ${isOpen ? "":"hidden"}`}>
           <div>
-            <div className='py-2 bg-slate-400 flex justify-between'>
+            <div className='py-2 px-2 bg-slate-400 flex justify-between items-center cursor-pointer' onClick={toggle1}>
               <h2 className="text-[25px] ">Concepto de Límite</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out${isOpen1 ? "transform rotate-180":"transform rotate-0"}`} onClick={toggle1}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className='px-8 hidden'>
+            <div className={`px-8 py-4 ${isOpen1 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Difinicion de Límite</h3>
-                <h3 className="text-[17px]">El concepto de límite es fundamental en cálculo y análisis matemático. En término generales, un límite describre el comportamiento de un función a medida que su argumento se aproxima a un valor específico. La defenición formal se expresa utilizando la notación <Latex>{expresiones[0]}</Latex>.</h3>
-                <h3>subtemas</h3>
-                <h3 className="text-[17px]"><span className='font-bold'>Definición Intuitiva:</span> El límite de <Latex>{expresiones[1]}</Latex> cuando <Latex>{expresiones[4]}</Latex> tiende a <Latex>{expresiones[2]}</Latex> es <Latex>{expresiones[3]}</Latex> si, al acercarse <Latex>{expresiones[4]}</Latex> a <Latex>{expresiones[2]}</Latex>,<Latex>{expresiones[1]}</Latex> se acerca a <Latex>{expresiones[2]}</Latex>. Cuya notación es: <Latex>{expresiones[5]}</Latex>.</h3>
-                <h3 className="text-[17px]"><span className='font-bold'>Definición <Latex>{expresiones[0]}</Latex>:</span> Para todo <Latex>{expresiones[6]}</Latex> existe un <Latex>{expresiones[7]}</Latex> tal que si <Latex>{expresiones[8]}</Latex>, entonces <Latex>{expresiones[9]}</Latex>.</h3>
+                <h3 className="text-[17px] mt-3">El concepto de límite es fundamental en cálculo y análisis matemático. En término generales, un límite describre el comportamiento de un función a medida que su argumento se aproxima a un valor específico. La defenición formal se expresa utilizando la notación <Latex>{expresiones[0]}</Latex>.</h3>
+                <h3 className="text-[17px] px-3 mt-3"><span className='font-bold'>Definición Intuitiva:</span> El límite de <Latex>{expresiones[1]}</Latex> cuando <Latex>{expresiones[4]}</Latex> tiende a <Latex>{expresiones[2]}</Latex> es <Latex>{expresiones[3]}</Latex> si, al acercarse <Latex>{expresiones[4]}</Latex> a <Latex>{expresiones[2]}</Latex>,<Latex>{expresiones[1]}</Latex> se acerca a <Latex>{expresiones[2]}</Latex>. Cuya notación es: <Latex>{expresiones[5]}</Latex>.</h3>
+                <h3 className="text-[17px] px-3 mt-3"><span className='font-bold'>Definición <Latex>{expresiones[0]}</Latex>:</span> Para todo <Latex>{expresiones[6]}</Latex> existe un <Latex>{expresiones[7]}</Latex> tal que si <Latex>{expresiones[8]}</Latex>, entonces <Latex>{expresiones[9]}</Latex>.</h3>
               </div>
               <div>
-                <h3 className='text-[19px] font-semibold'>Límites Finito</h3>
+                <h3 className='text-[19px] font-semibold mt-5'>Límites Finito</h3>
                 <h3 className='text-[17px]'>Estos límites ocurren cuando tanto el valor al que se aproxima <Latex>{expresiones[4]}</Latex> como el valor al que se aproxima <Latex>{expresiones[1]} son finitos.</Latex></h3>
                 <h3 className='text-[17px]'>Ejemplos:</h3>
                 <h3 className='text-[17px]'><Latex>{expresiones[10]}</Latex></h3>
@@ -60,13 +106,13 @@ const Aprende: React.FC = () => {
             </div>
           </div>
           <div>
-            <div className='py-2 bg-slate-400 flex justify-between'>
+            <div className='py-2 px-2 bg-slate-400 flex justify-between items-center cursor-pointer'  onClick={toggle2}>
               <h2 className="text-[25px]">Cálculo de Límites</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out${isOpen2 ? "transform rotate-180":"transform rotate-0"}`} onClick={toggle2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className='px-8 hidden'>
+            <div className={`px-8 py-4 ${isOpen2 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Evaluación Directa</h3>
                 <h3 className='text-[17px]'>La evaluación es el método más sencillo para calcular límites. Consiste en sustituir directament el valor al que se aproxima <Latex>{expresiones[4]}</Latex> en la función <Latex>{expresiones[1]}</Latex>. Si la función es continua en ese punto, el valor obtenido será el límite.</h3>
@@ -99,13 +145,13 @@ const Aprende: React.FC = () => {
             </div>
           </div>
           <div>
-            <div className='py-2 bg-slate-400 flex justify-between'>
+            <div className='py-2 px-2 bg-slate-400 flex justify-between items-center cursor-pointer' onClick={toggle3}>
               <h2 className="text-[25px]">Propiedades de los Límites</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out${isOpen3 ? "transform rotate-180":"transform rotate-0"}`} onClick={toggle3}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className='px-8 hidden'>
+            <div className={`px-8 py-4 ${isOpen3 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Suma de límites</h3>
                 <h3 className='text-[17px]'>Si <Latex>{expresiones[5]}</Latex> y <Latex>{expresiones2[0]}</Latex>, entonces:</h3>
@@ -137,13 +183,13 @@ const Aprende: React.FC = () => {
             </div>
           </div>
           <div>
-            <div>
-              <h2 className="text-[25px] py-2 bg-slate-400">Límites Laterales</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+            <div className='py-2 px-2 bg-slate-400 flex justify-between items-center cursor-pointer' onClick={toggle4}>
+              <h2 className="text-[25px]">Límites Laterales</h2>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out${isOpen4 ? "transform rotate-180":"transform rotate-0"}`} onClick={toggle4}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className='px-8 hidden'>
+            <div className={`px-8 py-4 ${isOpen4 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Límite por la Derecha</h3>
                 <h3 className='text-[17px]'>El límite de <Latex>{expresiones[1]}</Latex> cuando <Latex>{expresiones[4]}</Latex> se aproxima a <Latex>{expresiones[2]}</Latex> desde la derecha (es decir, para valores de<Latex>{expresiones[4]}</Latex> mayores pero cecanos a <Latex>{expresiones[2]}</Latex>) se denota como <Latex>{expresiones3[0]}</Latex>.</h3>
@@ -169,19 +215,19 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px]'>Ejemplos:</h3>
                 <h3 className='text-[17px]'><Latex>{expresiones3[12]}</Latex></h3>
                 <h3 className='text-[17px]'><Latex>{expresiones3[13]}</Latex></h3>
-                <h3 className='text-[17px]'>Los límites laterales no son iguales, por lo tantoÑ</h3>
+                <h3 className='text-[17px]'>Los límites laterales no son iguales, por lo tanto:</h3>
                 <h3 className='text-[17px]'><Latex>{expresiones3[14]}</Latex></h3>
               </div>
             </div>
           </div>
           <div>
-            <div>
-              <h2 className="text-[25px] py-2 bg-slate-400">Límites Indeterminados</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+            <div className='py-2 px-2 bg-slate-400 flex justify-between items-center cursor-pointer' onClick={toggle5}>
+              <h2 className="text-[25px]">Límites Indeterminados</h2>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out${isOpen5 ? "transform rotate-180":"transform rotate-0"}`} onClick={toggle5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className='px-8 hidden'>
+            <div className={`px-8 py-4 ${isOpen5 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Formas indeterminadas comunes</h3>
                 <h3 className='text-[17px]'>Las formas indeterminadas más comunes son:</h3>
@@ -252,13 +298,13 @@ const Aprende: React.FC = () => {
             </div>
           </div>
           <div>
-            <div>
-              <h2 className="text-[25px] py-2 bg-slate-400">Teoremas importantes</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+            <div className='py-2 px-2 bg-slate-400 flex justify-between items-center cursor-pointer'onClick={toggle6}>
+              <h2 className="text-[25px] ">Teoremas importantes</h2>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out${isOpen6 ? "transform rotate-180":"transform rotate-0"}`} onClick={toggle6}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className='px-8 hidden'>
+            <div className={`px-8 py-4 ${isOpen6 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Teorema del Sándwich (Teorema de la compresión)</h3>
                 <h3 className='text-[17px]'>El teorema del Sándwich se utiliza para encontrar el límite de una función que está acotado entre dos funciones más simples cuyas límites son conocidos y son iguales en un punto particular </h3>
@@ -301,13 +347,13 @@ const Aprende: React.FC = () => {
             </div>
           </div>
           <div>
-            <div>
-              <h2 className="text-[25px] py-2 bg-slate-400">Limites y continuidad</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+            <div className='py-2 px-2 bg-slate-400 flex justify-between items-center cursor-pointer' onClick={toggle7}>
+              <h2 className="text-[25px]">Limites y continuidad</h2>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out${isOpen7 ? "transform rotate-180":"transform rotate-0"}`} onClick={toggle7}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className='px-8 hidden'>
+            <div className={`px-8 py-4 ${isOpen7 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Relación entre límites y continuidad</h3>
                 <h3 className='text-[17px]'>Una función <Latex>{expresiones[1]}</Latex> es continua en un punto <Latex>{expresiones7[0]}</Latex> si se cumple las siguientes tres condiciones:</h3>
@@ -353,13 +399,13 @@ const Aprende: React.FC = () => {
             </div>
           </div>
           <div>
-            <div>
-              <h2 className="text-[25px] py-2 bg-slate-400">Aplicaciones de Límites</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+            <div className='py-2 px-2 bg-slate-400 flex justify-between items-center cursor-pointer' onClick={toggle8}>
+              <h2 className="text-[25px]">Aplicaciones de Límites</h2>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out${isOpen8 ? "transform rotate-180":"transform rotate-0"}`} onClick={toggle8}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className='px-8 hidden'>
+            <div className={`px-8 py-4 ${isOpen8 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Derivadas</h3>
                 <h3 className='text-[17px]'>Las derivadas se definen a través del concepto de límite. La derivada de una función <Latex>{expresiones[1]}</Latex> en un punto <Latex>{expresiones7[0]}</Latex> mide la tasa de cambio instantánea de la función en ese punto y se define como el límite de la razón de cambio promedio cuando el intervalo de cambio se hace infinitesimalmente pequeño.</h3>
@@ -403,12 +449,15 @@ const Aprende: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className='px-40'>
-        <div className='bg-black text-white py-4 px-4 mt-5'>
+      <div className='xl:px-40 px-2'>
+        <div className='bg-black text-white py-4 px-4 mt-5 flex items-center justify-between cursor-pointer'onClick={toggle9}>
           <h1 className="text-[35px] font-medium">Derivadas</h1>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out${isOpen9? "transform rotate-180":"transform rotate-0"}`} onClick={toggle9}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
         </div>
-        <div className='hidden'>
-          <h3 className='text-[17px]'>Proximamente......</h3>
+        <div className={`px-8  ${isOpen9 ? "":"hidden"}`}>
+          <h3 className='text-[35px]'>Proximamente......</h3>
         </div>
       </div>
     </div>
