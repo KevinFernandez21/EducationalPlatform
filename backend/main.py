@@ -11,12 +11,12 @@ origins = [
     "http://localhost:3000",  # React por defecto corre en el puerto 3000
     "http://localhost:8000",  # Si estás usando Vite.js para React
     "https://educational-platform-737sh7mdg-kevin-fernandezs-projects.vercel.app",  # Tu aplicación desplegada en Vercel
-    "https://intellectual-corrinne-orangecorp-fd76069e.koyeb.app"
+    "https://intellectual-corrinne-orangecorp-fd76069e.koyeb.app"  # Tu aplicación desplegada en Koyeb
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -27,6 +27,7 @@ class FunctionInput(BaseModel):
 
 @app.post("/plot")
 def plot_function(input: FunctionInput):
+    print(f"Received request with function: {input.function}")  # Agrega logging
     x = sym.symbols('x')
     f_input = input.function.replace('e', 'sym.E')
     
