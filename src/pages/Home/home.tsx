@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Carousel from '../../shared/carrousel';
-import Graficas from "../../shared/Graficas";
+//import Graficas from "../../shared/Graficas";
 import GraficasModificables  from "../../shared/GraficasModificables";
 function home() {
   return (
