@@ -75,7 +75,7 @@ const GraficasModificables = () => {
   }, []);
 
   return (
-    <div className="text-center w-[500px] ">
+    <div className="text-center xl:w-[500px] w-[250px] ">
       {plotData && (
         <div>
           <Line

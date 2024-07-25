@@ -1,5 +1,6 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Graficas from './Graficas';
 
 const responsive = {
   superLargeDesktop: {
@@ -26,11 +27,11 @@ const responsive = {
 
 const MyCarousel = () => (
   <Carousel responsive={responsive} className='py-5'>
-    <div>Item 1</div>
-    <div>Item 2</div>
-    <div>Item 3</div>
-    <div>Item 4</div>
-    <div>Item 5</div>
+    <div className='flex flex-col justify-center items-center'><h1>Item1</h1><Graficas>3*x^2 + 2*x + 1</Graficas></div>
+    <div className='flex flex-col justify-center items-center'><h1>Item2</h1><Graficas>2*x+1</Graficas></div>
+    <div className='flex flex-col justify-center items-center'><h1>Item3</h1><Graficas>2*x+1</Graficas></div>
+    <div className='flex flex-col justify-center items-center'><h1>Item4</h1><Graficas>2*x+1</Graficas></div>
+    <div className='flex flex-col justify-center items-center'><h1>Item5</h1><Graficas>2*x+1</Graficas></div>
   </Carousel>
 );
 
