@@ -43,12 +43,12 @@ const GraficasModificables = () => {
   const fetchData = async (func: string) => {
     try {
       const response = await axios.post('https://intellectual-corrinne-orangecorp-fd76069e.koyeb.app/plot', { function: func });
-      const { x_vals, y_vals, latex } = response.data;
+      const { x_vals, y_vals} = response.data;
       setPlotData({
         labels: x_vals,
         datasets: [
           {
-            label: `f(x) = ${latex}`,
+            label: `f(x)`,
             data: y_vals,
             borderColor: 'black',
             borderWidth: 2,

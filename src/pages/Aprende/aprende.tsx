@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'katex/dist/katex.min.css';
 import Latex from 'react-latex-next';
+import Graficas from '../../shared/Graficas';
 
 const Aprende: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -99,6 +100,14 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3'>Ejemplos:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones[14]}</Latex></h3>
                 <h3 className='text-[15px] mt-3'> A medida que <Latex>{expresiones[4]}</Latex> tiende a infinito, la función <Latex>{expresiones[15]}</Latex> también tiende a infinito.</h3>
+              </div>
+              <div>
+                <h3 className='text-[19px] font-semibold'>Grafica</h3>
+                <h3 className='text-[19px] font-semibold '><Graficas>x</Graficas> </h3>
+              </div>
+              <div>
+                <h3 className='text-[19px] font-semibold'>Videos</h3>
+                <h3 className='text-[19px] font-semibold '> </h3>
               </div>
             </div>
           </div>
