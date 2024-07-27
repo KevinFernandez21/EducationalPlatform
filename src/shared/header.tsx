@@ -37,9 +37,11 @@ function Header() {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 cursor-pointer" onClick={toggle}>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
             </svg>
-            <div className={`absolute top-14 right-0 m-2  px-4 bg-white shadow-md shadow-gray-500 border-gray-200 rounded-xl transition-all duration-300 ease-in-out ${show ?"":"top-[-400px]"}`}>
+            <div className={`absolute top-14 right-0 m-2  px-4 bg-white  shadow-md shadow-gray-500 border-gray-200 rounded-xl transition-all duration-300 ease-in-out ${show ?"":"top-[-400px]"}`}>
                 <ul className="py-3">
-                    <li className="text-[20px]"><Link to={'/Books'}>Libros</Link></li>
+                    <li className="xl:hidden flex text-[20px]"><Link to={'/Books'}>Home</Link></li>
+                    <li className="xl:hidden flex text-[20px] mt-2"><Link to={'/Books'}>Aprende</Link></li>
+                    <li className="text-[20px] mt-2"><Link to={'/Books'}>Libros</Link></li>
                     <li className="text-[20px] mt-2"><Link to={'/Practica'}>Practica</Link></li>
                     <li className="text-[20px] mt-2"><Link to={'/nosotros'}>¿Quienes Somos?</Link></li>
                 </ul>

@@ -58,7 +58,7 @@ const Aprende: React.FC = () => {
   
   return (
     <div className='p-5 z-[-1]'>
-      <div className='xl:px-40 px-2'>
+      <div className='xl:px-40 px-1'>
         <div className='bg-black text-white py-4 px-4 justify-between flex items-center cursor-pointer' onClick={toggle}>
           <h1 className="text-[35px] font-medium">Limites</h1>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out ${isOpen ? "transform rotate-180":"transform rotate-0"}`} onClick={toggle}>
@@ -73,7 +73,7 @@ const Aprende: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className={`px-8 py-4 ${isOpen1 ? "":"hidden"}`}>
+            <div className={`xl:px-8 px-3 py-4 ${isOpen1 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Difinicion de Límite</h3>
                 <h3 className="text-[17px] mt-3">El concepto de límite es fundamental en cálculo y análisis matemático. En término generales, un límite describre el comportamiento de un función a medida que su argumento se aproxima a un valor específico. La defenición formal se expresa utilizando la notación <Latex>{expresiones[0]}</Latex>.</h3>
@@ -85,6 +85,9 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3'>Estos límites ocurren cuando tanto el valor al que se aproxima <Latex>{expresiones[4]}</Latex> como el valor al que se aproxima <Latex>{expresiones[1]} son finitos.</Latex></h3>
                 <h3 className='text-[17px] mt-3'>Ejemplos:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones[10]}</Latex></h3>
+                <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>2*x+1</Graficas> </h3>
+                </div>
                 <h3 className='text-[15px] mt-3'> En este caso, a medida que <Latex>{expresiones[4]}</Latex> se acerca a 3, la función <Latex>{expresiones[11]}</Latex> se acerca a 7.</h3>
               </div>
               <div>
@@ -92,6 +95,9 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3'>Los límites infinitos describen el comportamiento de una función cuando se aproxima a un valor infinito o cuando la funcion tiende a infinito.</h3>
                 <h3 className='text-[17px] mt-3'>Ejemplos:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones[12]}</Latex></h3>
+                <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>1/x</Graficas> </h3>
+                </div>
                 <h3 className='text-[15px] mt-3'> A medida que <Latex>{expresiones[4]}</Latex> crece sin límites, <Latex>{expresiones[13]}</Latex>se aproxima en 0.</h3>
               </div>
               <div>
@@ -101,9 +107,8 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones[14]}</Latex></h3>
                 <h3 className='text-[15px] mt-3'> A medida que <Latex>{expresiones[4]}</Latex> tiende a infinito, la función <Latex>{expresiones[15]}</Latex> también tiende a infinito.</h3>
               </div>
-              <div>
-                <h3 className='text-[19px] font-semibold'>Grafica</h3>
-                <h3 className='text-[19px] font-semibold '><Graficas>x</Graficas> </h3>
+              <div className='flex justify-center mt-5'>
+                <h3 className='text-[19px] font-semibold '><Graficas>3*x^2+2*x+1</Graficas> </h3>
               </div>
               <div>
                 <h3 className='text-[19px] font-semibold'>Videos</h3>
@@ -118,12 +123,15 @@ const Aprende: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className={`px-8 py-4 ${isOpen2 ? "":"hidden"}`}>
+            <div className={`xl:px-8 px-3 py-4 ${isOpen2 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Evaluación Directa</h3>
                 <h3 className='text-[17px] mt-3'>La evaluación es el método más sencillo para calcular límites. Consiste en sustituir directament el valor al que se aproxima <Latex>{expresiones[4]}</Latex> en la función <Latex>{expresiones[1]}</Latex>. Si la función es continua en ese punto, el valor obtenido será el límite.</h3>
                 <h3 className='text-[17px] mt-3'>Ejemplos:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones1[0]}</Latex></h3>
+                <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>2*x+1</Graficas> </h3>
+                </div>
                 <h3 className='text-[15px] mt-3'>Sin embargo, este método solo funciona si la función es continua y no presenta indeterminaciones en el punto evaluado.</h3>
               </div>
               <div>
@@ -131,8 +139,12 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3'>El método de factoreo se utiliza cuando la evaluación directa da lugar a una forma indeterminada, como <Latex>{expresiones1[1]}</Latex>. Consiste en factorizar el numerador y/o el denominador para simplificar la expresión.</h3>
                 <h3 className='text-[17px] mt-3'>Ejemplos:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones1[2]}</Latex></h3>
+                <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>(x^2-4)/(x-2)</Graficas> </h3>
+                </div>
                 <h3 className='text-[17px] mt-3'>Factorizamos el numerador:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones1[3]}</Latex></h3>
+                
                 <h3 className='text-[17px] mt-3'>Simplificamos cancelando el término común:</h3>
                 <h3 className='text-[15px] mt-3 text-center'><Latex>{expresiones1[4]}</Latex></h3>
               </div>
@@ -157,7 +169,7 @@ const Aprende: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className={`px-8 py-4 ${isOpen3 ? "":"hidden"}`}>
+            <div className={`xl:px-8 px-3 py-4 ${isOpen3 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold mt-5'>Suma de límites</h3>
                 <h3 className='text-[17px] mt-3'>Si <Latex>{expresiones[5]}</Latex> y <Latex>{expresiones2[0]}</Latex>, entonces:</h3>
@@ -195,13 +207,16 @@ const Aprende: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className={`px-8 py-4 ${isOpen4 ? "":"hidden"}`}>
+            <div className={`xl:px-8 px-3 py-4 ${isOpen4 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Límite por la Derecha</h3>
                 <h3 className='text-[17px] mt-3'>El límite de <Latex>{expresiones[1]}</Latex> cuando <Latex>{expresiones[4]}</Latex> se aproxima a <Latex>{expresiones[2]}</Latex> desde la derecha (es decir, para valores de<Latex>{expresiones[4]}</Latex> mayores pero cecanos a <Latex>{expresiones[2]}</Latex>) se denota como <Latex>{expresiones3[0]}</Latex>.</h3>
                 <h3 className='text-[17px] mt-3 px-6'><span className='font-bold'>Definición formal:</span> <Latex>{expresiones3[1]}</Latex> significa que para todo <Latex>{expresiones[6]}</Latex>, existe <Latex>{expresiones[7]}</Latex> tal que si <Latex>{expresiones3[2]}</Latex>, entonces <Latex>{expresiones[9]}</Latex>.</h3>
                 <h3 className='text-[17px] mt-3 px-6'>Ejemplos:</h3>
                 <h3 className='text-[17px] mt-3 px-6 text-center'><Latex>{expresiones3[3]}</Latex></h3>
+                <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>3*x-2</Graficas> </h3>
+                </div>
                 <h3 className='text-[15px] mt-3 px-6'>A medida que <Latex>{expresiones[4]}</Latex> se aproxima a 1 desde la derecha, <Latex>{expresiones3[4]}</Latex> se aproxima a 1.</h3>
               </div>
               <div>
@@ -209,6 +224,9 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 px-6'><span className='font-bold'>Definición formal:</span> <Latex>{expresiones3[6]}</Latex> significa que para todo <Latex>{expresiones[6]}</Latex>, existe <Latex>{expresiones[7]}</Latex> tal que si <Latex>{expresiones3[7]}</Latex>, entonces <Latex>{expresiones[9]}</Latex>.</h3>
                 <h3 className='text-[17px] mt-3 px-6'>Ejemplos:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones3[8]}</Latex></h3>
+                <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>3*x-2</Graficas> </h3>
+                </div>
                 <h3 className='text-[15px] mt-3 px-6'>A medida que <Latex>{expresiones[4]}</Latex> se aproxima a 1 desde la izquierda, <Latex>{expresiones3[4]}</Latex> se aproxima a 1.</h3>
               </div>
               <div>
@@ -233,7 +251,7 @@ const Aprende: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className={`px-8 py-4 ${isOpen5 ? "":"hidden"}`}>
+            <div className={`xl:px-8 px-3 py-4 ${isOpen5 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold '>Formas indeterminadas comunes</h3>
                 <h3 className='text-[17px] mt-3'>Las formas indeterminadas más comunes son:</h3>
@@ -253,6 +271,9 @@ const Aprende: React.FC = () => {
                   <h3 className='text-[17px] px-6 mt-3'>Este método consiste en factorizar el numerador y/o el denominador para cancelar términos y simplificar la expresión.</h3>
                   <h3 className='text-[17px] px-6 mt-3'>Ejemplos:</h3>
                   <h3 className='text-[17px] px-6 mt-3 text-center'><Latex>{expresiones1[2]}</Latex></h3>
+                  <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>(x^2-4)/(x-2)</Graficas> </h3>
+                </div>
                   <h3 className='text-[17px] px-6 mt-3'>Factorizamos el numerador:</h3>
                   <h3 className='text-[17px] px-6 mt-3 text-center'><Latex>{expresiones1[3]}</Latex></h3>
                   <h3 className='text-[17px] px-6 mt-3'>Simplificamos cancelando el término común:</h3>
@@ -275,6 +296,9 @@ const Aprende: React.FC = () => {
                   <h3 className='text-[17px] px-6 mt-3'>La regla de L'Hopital se aplica a las formas indeterminadas <Latex>{expresiones4[0]}</Latex> y <Latex>{expresiones4[1]}</Latex>. Consiste en derivar el numerador y el denominador por searado y luego evaluar el límite de la nueva fracción.</h3>
                   <h3 className='text-[17px] px-6 mt-3'>Ejemplos:</h3>
                   <h3 className='text-[17px] px-6 mt-3 text-center'><Latex>{expresiones5[1]}</Latex></h3>
+                  <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>sin(x)/x</Graficas> </h3>
+                </div>
                   <h3 className='text-[17px] px-6 mt-3'>Directamente obtenemos <Latex>{expresiones4[0]}</Latex>, por lo que aplicamos la regla de L'Hopital:</h3>
                   <h3 className='text-[17px] px-6 mt-3 text-center'><Latex>{expresiones5[2]}</Latex></h3>
                 </div>
@@ -283,6 +307,9 @@ const Aprende: React.FC = () => {
                   <h3 className='text-[17px] px-6 mt-3'>La expansión en series de Taylor se utiliza para aproximar funciones cerca de un punto y resolver formas indeterminadas.</h3>
                   <h3 className='text-[17px] px-6 mt-3'>Ejemplos:</h3>
                   <h3 className='text-[17px] px-6 mt-3 text-center'><Latex>{expresiones5[3]}</Latex></h3>
+                  <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>(E^x-1)/(x)</Graficas> </h3>
+                </div>
                   <h3 className='text-[17px] px-6 mt-3'>Usamos la expansión de Taylor de <Latex>{expresiones5[4]}</Latex> cerca de 0:</h3>
                   <h3 className='text-[17px] px-6 mt-3 text-center'><Latex>{expresiones5[5]}</Latex></h3>
                   <h3 className='text-[17px] px-6 mt-3'>Entonces:</h3>
@@ -295,6 +322,9 @@ const Aprende: React.FC = () => {
                   <h3 className='text-[17px] px-6 mt-3'>A veces, simplificar la expresión algebraica puedo resolver la indeterminación.</h3>
                   <h3 className='text-[17px] px-6 mt-3'>Ejemplos:</h3>
                   <h3 className='text-[17px] px-6 mt-3 text-center'><Latex>{expresiones5[8]}</Latex></h3>
+                  <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>sin(2*x)/x</Graficas> </h3>
+                </div>
                   <h3 className='text-[17px] px-6 mt-3'>Simplificamos la fración:</h3>
                   <h3 className='text-[17px] px-6 mt-3 text-center'><Latex>{expresiones5[9]}</Latex></h3>
                   <h3 className='text-[17px] px-6 mt-3'>Sabemos que <Latex>{expresiones5[10]}</Latex>, por lo tanto:</h3>
@@ -310,7 +340,7 @@ const Aprende: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className={`px-8 py-4 ${isOpen6 ? "":"hidden"}`}>
+            <div className={`xl:px-8 px-3 py-4 ${isOpen6 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Teorema del Sándwich (Teorema de la compresión)</h3>
                 <h3 className='text-[17px] mt-3'>El teorema del Sándwich se utiliza para encontrar el límite de una función que está acotado entre dos funciones más simples cuyas límites son conocidos y son iguales en un punto particular </h3>
@@ -326,6 +356,9 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones6[6]}</Latex> y <Latex>{expresiones6[7]}</Latex></h3>
                 <h3 className='text-[17px] mt-3'>Así:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones6[8]}</Latex></h3>
+                <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>x^2*sin(1/x)</Graficas> </h3>
+                </div>
               </div>
               <div>
                 <h3 className='text-[19px] font-semibold mt-5'>Teorema de la Acotación</h3>
@@ -359,7 +392,7 @@ const Aprende: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className={`px-8 py-4 ${isOpen7 ? "":"hidden"}`}>
+            <div className={`xl:px-8 px-3 py-4 ${isOpen7 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Relación entre límites y continuidad</h3>
                 <h3 className='text-[17px] mt-3'>Una función <Latex>{expresiones[1]}</Latex> es continua en un punto <Latex>{expresiones7[0]}</Latex> si se cumple las siguientes tres condiciones:</h3>
@@ -372,6 +405,9 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones7[3]}</Latex> en  <Latex>{expresiones7[4]}</Latex></h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones7[5]}</Latex></h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones7[6]}</Latex></h3>
+                <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>x^2</Graficas> </h3>
+                </div>
                 <h3 className='text-[17px] mt-3'>Dado que <Latex>{expresiones7[7]}</Latex>,<Latex>{expresiones6[9]}</Latex> es continua en <Latex>{expresiones7[4]}</Latex>.</h3>
               </div>
               <div>
@@ -389,6 +425,9 @@ const Aprende: React.FC = () => {
                   <h3 className='text-[17px] mt-3 px-6'><span className='font-bold'>Discontinuidad Infinita:</span> Ocurre cuando el límite de la función tiende a infinito en un punto.</h3>
                   <h3 className='text-[17px] mt-3 px-6' >Ejemplos:</h3>
                   <h3 className='text-[17px] mt-3 px-6 text-center'><Latex>{expresiones7[13]}</Latex></h3>
+                  <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>1/(x-2)</Graficas> </h3>
+                </div>
                   <h3 className='text-[17px] mt-3 px-6'>Evaluamos el límite:</h3>
                   <h3 className='text-[17px] mt-3 px-6 text-center'><Latex>{expresiones7[14]}</Latex> y <Latex>{expresiones7[15]}</Latex></h3>
                   <h3 className='text-[15px] mt-3 px-6'>La función tiene una discontinuidad infinita en <Latex>{expresiones7[4]}</Latex></h3>
@@ -411,7 +450,7 @@ const Aprende: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </div>
-            <div className={`px-8 py-4 ${isOpen8 ? "":"hidden"}`}>
+            <div className={`xl:px-8 px-3 py-4 ${isOpen8 ? "":"hidden"}`}>
               <div>
                 <h3 className='text-[19px] font-semibold'>Derivadas</h3>
                 <h3 className='text-[17px] mt-3'>Las derivadas se definen a través del concepto de límite. La derivada de una función <Latex>{expresiones[1]}</Latex> en un punto <Latex>{expresiones7[0]}</Latex> mide la tasa de cambio instantánea de la función en ese punto y se define como el límite de la razón de cambio promedio cuando el intervalo de cambio se hace infinitesimalmente pequeño.</h3>
@@ -419,6 +458,9 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[0]}</Latex></h3>
                 <h3 className='text-[17px] mt-3'>Ejemplo:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[1]}</Latex></h3>
+                <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>x^2</Graficas> </h3>
+                </div>
                 <h3 className='text-[17px] mt-3'>La derivada de <Latex>{expresiones[1]}</Latex> en <Latex>{expresiones7[0]}</Latex> es:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[2]}</Latex></h3>
                 <h3 className='text-[15px] mt-3'>Por lo tanto, la derivada de <Latex>{expresiones8[1]}</Latex> es <Latex>{expresiones8[3]}</Latex>.</h3>
@@ -435,6 +477,9 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[9]}</Latex></h3>
                 <h3 className='text-[17px] mt-3'>Usando la fórmula de la suma de cuadrados</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[10]}</Latex></h3>
+                <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>(x*(x+1)*(2*x+1))/(6)</Graficas> </h3>
+                </div>
                 <h3 className='text-[17px] mt-3'>Entonces:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[11]}</Latex></h3>
               </div>
@@ -447,6 +492,9 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3'>La serie geométrica:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[13]}</Latex></h3>
                 <h3 className='text-[17px] mt-3'>Converge <Latex>{expresiones8[14]}</Latex>, y su suma es:</h3>
+                <div className='flex justify-center mt-5'>
+                  <h3 className='text-[19px] font-semibold '><Graficas>(1/2)^x</Graficas> </h3>
+                </div>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[15]}</Latex></h3>
                 <h3 className='text-[17px] mt-3'>Para <Latex>{expresiones8[16]}</Latex>:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[17]}</Latex></h3>
@@ -462,7 +510,7 @@ const Aprende: React.FC = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
           </svg>
         </div>
-        <div className={`px-8  ${isOpen9 ? "":"hidden"}`}>
+        <div className={`xl:px-8 px-3  ${isOpen9 ? "":"hidden"}`}>
           <h3 className='text-[35px]'>Proximamente......</h3>
         </div>
       </div>

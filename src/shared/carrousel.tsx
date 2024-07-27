@@ -27,11 +27,11 @@ const responsive = {
 
 const MyCarousel = () => (
   <Carousel responsive={responsive} className='py-5'>
-    <div className='flex flex-col justify-center items-center'><h1>Item1</h1><Graficas>3*x^2 + 2*x + 1</Graficas></div>
-    <div className='flex flex-col justify-center items-center'><h1>Item2</h1><Graficas>2*x+1</Graficas></div>
-    <div className='flex flex-col justify-center items-center'><h1>Item3</h1><Graficas>2*x+1</Graficas></div>
-    <div className='flex flex-col justify-center items-center'><h1>Item4</h1><Graficas>2*x+1</Graficas></div>
-    <div className='flex flex-col justify-center items-center'><h1>Item5</h1><Graficas>2*x+1</Graficas></div>
+    <div className='flex flex-col justify-center items-center'><h1>Límites Finito</h1><Graficas>3*x^2 + 2*x + 1</Graficas></div>
+    <div className='flex flex-col justify-center items-center'><h1>Regla de L'Hopital</h1><Graficas>sin(x)/x</Graficas></div>
+    <div className='flex flex-col justify-center items-center'><h1>Expansión en series de Taylor</h1><Graficas>(E^x-1)/(x)</Graficas></div>
+    <div className='flex flex-col justify-center items-center'><h1>Relación entre límites y continuidad</h1><Graficas>x^2</Graficas></div>
+    <div className='flex flex-col justify-center items-center'><h1>Integrales</h1><Graficas>(x*(x+1)*(2*x+1))/(6)</Graficas></div>
   </Carousel>
 );
 
