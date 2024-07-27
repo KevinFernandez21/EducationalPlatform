@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'katex/dist/katex.min.css';
+import { useLocation } from 'react-router-dom';
 import Latex from 'react-latex-next';
 import Graficas from '../../shared/Graficas';
 
@@ -45,6 +46,50 @@ const Aprende: React.FC = () => {
   const toggle9 = () => {
     setIsOpen9(!isOpen9);
   };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const query = new URLSearchParams(location.search);
+    const section = query.get('section');
+
+    switch(section) {
+      case 'limitesFinito':
+        setIsOpen(true);
+        setIsOpen1(true);
+        break;
+      case 'reglaLhopital':
+        setIsOpen(true);
+        setIsOpen5(true);
+        break;
+      case 'taylor':
+        setIsOpen(true);
+        setIsOpen5(true);
+        break;
+      case 'continuidad':
+        setIsOpen(true);
+        setIsOpen7(true);
+        break;
+      case 'integrales':
+        setIsOpen(true);
+        setIsOpen8(true);
+        break;
+      default:
+        break;
+    }
+  }, [location]);
+
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 0);
+    }
+  }, [location]);
 
   const expresiones = [`\\(\\epsilon - \\delta\\)`,`\\( f(x) \\)`,`\\( a \\)`,`\\( L \\)`,`\\( x \\)`,`\\( \\lim_{{x \\to a}} f(x) = L \\)`,`\\(\\epsilon > 0\\)`,`\\(\\delta > 0\\)`,`\\(0 < |x - a| < \\delta\\)`,`\\(|f(x) - L| < \\epsilon\\)`,`\\( \\lim_{{x \\to 3}} f(2x + 1) = 7 \\)`,`\\( 2x + 1\\)`,`\\( \\lim_{{x \\to \\infty}} \\frac{1}{x} = 0\\)`,`\\(\\frac{1}{x}\\)`,`\\( \\lim_{{x \\to \\infty}} f(3x^2+2x + 1) = \\infty \\)`,`\\(3x^2 + 2x + 1\\)`]
   const expresiones1 = [`\\( \\lim_{{x \\to 3}} f(2x + 1) = 2(3) + 1 = 7 \\)`,`\\(\\frac{0}{0}\\)`,`\\( \\lim_{{x \\to 2}} \\frac{x^2-4}{x-2}\\)`,`\\(\\frac{x^2-4}{x-2} = \\frac{(x-2)(x+2)}{x-2}\\)`,`\\( \\lim_{{x+2 \\to 2}} = 2 + 2 = 4\\)`,`\\( \\lim_{{x+2 \\to 0}} \\frac{\\sqrt{x+1} - 1}{x}\\)`,`\\(\\frac{\\sqrt{x+1} - 1}{x} . \\frac{\\sqrt{x+1} + 1}{\\sqrt{x+1} + 1} = \\frac{(\\sqrt{x+1} - 1)(\\sqrt{x+1} + 1)}{x(\\sqrt{x + 1} + 1)} \\)`,`\\(\\frac{x-1+1}{x(\\sqrt{x + 1} + 1)}  = \\frac{x}{x(\\sqrt{x + 1} + 1)} = \\frac{1}{\\sqrt{x+1}+1} \\)`,`\\(\\lim_{{x \\to 0}}\\frac{1}{\\sqrt{x + 1} + 1}  = \\frac{1}{\\sqrt{0 + 1} + 1} = \\frac{1}{2} \\)`]
@@ -107,7 +152,7 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones[14]}</Latex></h3>
                 <h3 className='text-[15px] mt-3'> A medida que <Latex>{expresiones[4]}</Latex> tiende a infinito, la función <Latex>{expresiones[15]}</Latex> también tiende a infinito.</h3>
               </div>
-              <div className='flex justify-center mt-5'>
+              <div id="limitesFinito" className='flex justify-center mt-5' >
                 <h3 className='text-[19px] font-semibold '><Graficas>3*x^2+2*x+1</Graficas> </h3>
               </div>
               <div>
@@ -291,7 +336,7 @@ const Aprende: React.FC = () => {
                   <h3 className='text-[17px] px-6 mt-3'>Ahora evalumaos el límite directamente:</h3>
                   <h3 className='text-[17px] px-6 mt-3 text-center'><Latex>{expresiones1[8]}</Latex></h3>
                 </div>
-                <div>
+                <div id="reglaLhopital">
                   <h3 className='text-[19px] font-semibold mt-5 px-6'>Regla de L'Hopital</h3>
                   <h3 className='text-[17px] px-6 mt-3'>La regla de L'Hopital se aplica a las formas indeterminadas <Latex>{expresiones4[0]}</Latex> y <Latex>{expresiones4[1]}</Latex>. Consiste en derivar el numerador y el denominador por searado y luego evaluar el límite de la nueva fracción.</h3>
                   <h3 className='text-[17px] px-6 mt-3'>Ejemplos:</h3>
@@ -302,7 +347,7 @@ const Aprende: React.FC = () => {
                   <h3 className='text-[17px] px-6 mt-3'>Directamente obtenemos <Latex>{expresiones4[0]}</Latex>, por lo que aplicamos la regla de L'Hopital:</h3>
                   <h3 className='text-[17px] px-6 mt-3 text-center'><Latex>{expresiones5[2]}</Latex></h3>
                 </div>
-                <div>
+                <div id="taylor">
                   <h3 className='text-[19px] font-semibold mt-5 px-6'>Expansión en series de Taylor</h3>
                   <h3 className='text-[17px] px-6 mt-3'>La expansión en series de Taylor se utiliza para aproximar funciones cerca de un punto y resolver formas indeterminadas.</h3>
                   <h3 className='text-[17px] px-6 mt-3'>Ejemplos:</h3>
@@ -405,7 +450,7 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones7[3]}</Latex> en  <Latex>{expresiones7[4]}</Latex></h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones7[5]}</Latex></h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones7[6]}</Latex></h3>
-                <div className='flex justify-center mt-5'>
+                <div className='flex justify-center mt-5' id="continuidad">
                   <h3 className='text-[19px] font-semibold '><Graficas>x^2</Graficas> </h3>
                 </div>
                 <h3 className='text-[17px] mt-3'>Dado que <Latex>{expresiones7[7]}</Latex>,<Latex>{expresiones6[9]}</Latex> es continua en <Latex>{expresiones7[4]}</Latex>.</h3>
@@ -477,7 +522,7 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[9]}</Latex></h3>
                 <h3 className='text-[17px] mt-3'>Usando la fórmula de la suma de cuadrados</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[10]}</Latex></h3>
-                <div className='flex justify-center mt-5'>
+                <div className='flex justify-center mt-5' id="integrales">
                   <h3 className='text-[19px] font-semibold '><Graficas>(x*(x+1)*(2*x+1))/(6)</Graficas> </h3>
                 </div>
                 <h3 className='text-[17px] mt-3'>Entonces:</h3>

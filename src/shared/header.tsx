@@ -26,12 +26,8 @@ function Header() {
             <div className="border border-l border-gray-300"></div>
             <Link to= '/Aprende'>Aprende!</Link>
             <div className="border border-l border-gray-300"></div>
-            <a href="">buscar</a>
-            <button className="p-1">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-            </svg>
-            </button>
+            <Link to= '/Practica'>Practica</Link>
+            
         </div>
         <div  className="flex gap-2 border border-gray-200 rounded-full py-2 px-4 shadow-md shadow-gray-500">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 cursor-pointer" onClick={toggle}>
@@ -42,7 +38,7 @@ function Header() {
                     <li className="xl:hidden flex text-[20px]"><Link to={'/'}>Inicio</Link></li>
                     <li className="xl:hidden flex text-[20px] mt-2"><Link to={'/Aprende'}>Aprende</Link></li>
                     <li className="text-[20px] mt-2"><Link to={'/Books'}>Libros</Link></li>
-                    <li className="text-[20px] mt-2"><Link to={'/Practica'}>Practica</Link></li>
+                    <li className="xl:hidden flex  text-[20px] mt-2"><Link to={'/Practica'}>Practica</Link></li>
                     <li className="text-[20px] mt-2"><Link to={'/nosotros'}>¿Quienes Somos?</Link></li>
                 </ul>
             </div>
