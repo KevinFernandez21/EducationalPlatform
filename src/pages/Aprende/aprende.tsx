@@ -435,7 +435,7 @@ const Aprende: React.FC = () => {
           </div>
           <div>
             <div className='py-2 px-4 bg-slate-400 flex justify-between items-center cursor-pointer' onClick={toggle7}>
-              <h2 className="text-[25px]">Limites y continuidad</h2>
+              <h2 className="text-[25px]">Límites y continuidad</h2>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-6 cursor-pointer transition-all duration-300 ease-in-out${isOpen7 ? "transform rotate-180":"transform rotate-0"}`} onClick={toggle7}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
