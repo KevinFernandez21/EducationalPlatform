@@ -1,31 +1,54 @@
-/*const Creathor= [
+import Persona1 from '../../assets/Creators/Persona1.png';
+import Persona2 from '../../assets/Creators/Persona2.png';
+import Persona3 from '../../assets/Creators/Persona3.png';
+import Persona4 from '../../assets/Creators/Persona4.png';
+import Persona5 from '../../assets/Creators/Persona5.png';
+const Creator= [
   {
-    title: 'Calculus: Early Transcendentals',
-    author: 'James Stewart',
-    year: 2015,
-    //image: Book1,
-    link:"https://www.google.com/search?q=Calculus%3A+Early+Transcendentals+pdf&oq=Calculus%3A+Early+Transcendentals+pdf&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEIMTU5NGowajeoAgiwAgE&sourceid=chrome&ie=UTF-8"
+    Name: 'William Javier Zambrano tejena',
+    Frase: 'En CalcMaster, fusionamos el arte del diseño web con la precisión del cálculo. Creemos que cada proyecto es una oportunidad para innovar y crear experiencias digitales impactantes.',
+    Photo: Persona1,
   },
   {
-    title: 'Calculus and Analytic Geometry',
-    author: 'George B. Thomas, Ross L. Finney',
-    year: 2002,
-    //image: Book2,
-    link: "https://www.google.com/search?q=Calculus+and+Analytic+Geometry+pdf&sca_esv=d572f8b83efcb59b&biw=1440&bih=765&sxsrf=ADLYWIJ6i7PImmDdNHbjpwXBNFnR_U_5-g%3A1722085747892&ei=c_GkZvGZNpyYwbkPzpPf2Q8&ved=0ahUKEwixn5qqpceHAxUcTDABHc7JN_sQ4dUDCBA&uact=5&oq=Calculus+and+Analytic+Geometry+pdf&gs_lp=Egxnd3Mtd2l6LXNlcnAiIkNhbGN1bHVzIGFuZCBBbmFseXRpYyBHZW9tZXRyeSBwZGYyCBAAGIAEGMsBMggQABiABBjLATIIEAAYgAQYywEyCBAAGIAEGMsBMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeSJcMUABYowpwAHgAkAEAmAGOAaABkQWqAQMwLjW4AQPIAQD4AQL4AQGYAgWgAqEFwgIMECMYgAQYExgnGIoFwgIKECMYgAQYJxiKBcICCxAuGIAEGNQCGMsBwgIIEC4YgAQYywHCAgUQABiABJgDAJIHAzAuNaAHwTA&sclient=gws-wiz-serp"
+    Name: 'Jonathan Joel vera Quevedo',
+    Frase: 'Nos apasiona convertir la complejidad del cálculo en soluciones web intuitivas y estéticamente agradables. Cada diseño es una obra de arte pensada para educar e inspirar.',
+    Photo: Persona2
   },
   {
-    title: 'Calculus',
-    author: 'Ron Larson, Bruce H. Edwards',
-    year: 2013,
-    //image: Book3,
-    link: "https://www.google.com/search?sca_esv=d572f8b83efcb59b&sxsrf=ADLYWIKqdA6Fy7v9G-Q-fmSxRt7f5zlwQQ:1722085744947&q=Calculus+Ron+Larson,+Bruce+H.+Edwards+pdf&source=lnms&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgWizR0-0aFOH11Sb5tlNhd7L9QFlHbGCCw2CV3tLpo-Fa7jL9jFUN-fz1eiUy5q0wDjsVt32IJIzNMiPcfzjXJ10AkD48ypkm40Ne11OjBPF7o1aeKm41t1okBwqUrEi2Panglwd3pqeek0ojuz-L7kCvSUa4cGqhQbVnc1zbm8y0pxpbM435DOShZvCJvPTPCG_3hw&sa=X&ved=2ahUKEwi-uOaopceHAxVxSzABHW39A1QQ0pQJegQIDhAB&biw=1440&bih=765&dpr=1"
+    Name: 'Michael Miranda Samuel Lastre',
+    Frase: 'En CalcMaster, creemos que el aprendizaje debe ser tanto inspirador como accesible. Diseñamos plataformas educativas que no solo enseñan, sino que también encantan a nuestros usuarios.',
+    Photo: Persona3,
+  },
+  {
+    Name: 'Erick Javier Suárez Cedeño',
+    Frase: 'Todos somos libres de aprender desde cero, ya que nunca es tarde para empezar a aprender.',
+    Photo: Persona4,
+  },
+  {
+    Name: 'Nayeli Belén Guillin Quispe',
+    Frase: 'Nuestro equipo combina la exactitud matemática con un diseño web elegante, asegurando que cada interacción sea perfecta y funcional. La belleza está en los detalles y la exactitud.',
+    Photo: Persona5
   }
-];*/
+];
 
 function nosotros() {
   return (
-    <div>nosotros</div>
-  )
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-6 px-8 items-center justify-center">
+      {Creator.map((creator, index) => (
+        <div className="relative w-[300px] h-[400px] mx-auto" key={index}>
+          <div className="flip-card-inner h-full w-full transition-transform transform-style-3d duration-500 hover:rotate-y-180">
+            <div className="flip-card-front absolute inset-0 backface-hidden flex flex-col items-center justify-center bg-white shadow-lg p-4 rounded-lg">
+              <h2 className="font-bold text-lg mb-4">{creator.Name}</h2>
+              <img className="w-full h-auto rounded" src={creator.Photo} alt="creator" />
+            </div>
+            <div className="flip-card-back absolute inset-0 backface-hidden rotate-y-180 flex items-center justify-center bg-black text-white shadow-lg p-4 rounded-lg">
+              <p className="text-center">{creator.Frase}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 }
 
-export default nosotros
+export default nosotros;
