@@ -57,6 +57,7 @@ const Aprende: React.FC = () => {
       case 'limitesFinito':
         setIsOpen(true);
         setIsOpen1(true);
+        
         break;
       case 'reglaLhopital':
         setIsOpen(true);
@@ -81,6 +82,7 @@ const Aprende: React.FC = () => {
 
   useEffect(() => {
     const hash = location.hash.replace('#', '');
+    console.log(hash);
     if (hash) {
       setTimeout(() => {
         const element = document.getElementById(hash);
@@ -152,7 +154,8 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones[14]}</Latex></h3>
                 <h3 className='text-[15px] mt-3'> A medida que <Latex>{expresiones[4]}</Latex> tiende a infinito, la función <Latex>{expresiones[15]}</Latex> también tiende a infinito.</h3>
               </div>
-              <div id="limitesFinito" className='flex justify-center mt-5' >
+              <section id="limitesFinito"></section>
+              <div  className='flex justify-center mt-5' >
                 <h3 className='text-[19px] font-semibold '><Graficas>3*x^2+2*x+1</Graficas> </h3>
               </div>
               <div>
