@@ -158,9 +158,17 @@ const Aprende: React.FC = () => {
               <div  className='flex justify-center mt-5' >
                 <h3 className='text-[19px] font-semibold '><Graficas>3*x^2+2*x+1</Graficas> </h3>
               </div>
-              <div>
-                <h3 className='text-[19px] font-semibold'>Videos</h3>
-                <h3 className='text-[19px] font-semibold '> </h3>
+              <div className='flex flex-col items-center'>
+                <h3 className='text-[30px] font-semibold '>Video</h3>
+                <iframe
+                  width="420"
+                  height="240"
+                  src="https://www.youtube.com/embed/6e9ZD7vAmv4"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen>
+                </iframe>
               </div>
             </div>
           </div>
@@ -208,6 +216,18 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3'>Ahora evaluamos el límite directamente:</h3>
                 <h3 className='text-[15px] mt-3 text-center'><Latex>{expresiones1[8]}</Latex></h3>
               </div>
+              <div className='flex flex-col items-center'>
+                <h3 className='text-[30px] font-semibold '>Video</h3>
+                <iframe
+                  width="420"
+                  height="240"
+                  src="https://www.youtube.com/embed/yptVvhFVFIo"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen>
+                </iframe>
+              </div>
             </div>
           </div>
           <div>
@@ -245,6 +265,18 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones2[8]}</Latex></h3>
                 <h3 className='text-[17px] mt-3'>Ejemplos:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones2[9]}</Latex></h3>
+              </div>
+              <div className='flex flex-col items-center'>
+                <h3 className='text-[30px] font-semibold '>Video</h3>
+                <iframe
+                  width="420"
+                  height="240"
+                  src="https://www.youtube.com/embed/PYBYCP6aeiI"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen>
+                </iframe>
               </div>
             </div>
           </div>
@@ -289,6 +321,18 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones3[13]}</Latex></h3>
                 <h3 className='text-[17px] mt-3'>Los límites laterales no son iguales, por lo tanto:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones3[14]}</Latex></h3>
+              </div>
+              <div className='flex flex-col items-center'>
+                <h3 className='text-[30px] font-semibold '>Video</h3>
+                <iframe
+                  width="420"
+                  height="240"
+                  src="https://www.youtube.com/embed/7ahPOkG-uz0"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen>
+                </iframe>
               </div>
             </div>
           </div>
@@ -378,6 +422,18 @@ const Aprende: React.FC = () => {
                   <h3 className='text-[17px] px-6 mt-3'>Sabemos que <Latex>{expresiones5[10]}</Latex>, por lo tanto:</h3>
                   <h3 className='text-[17px] px-6 mt-3 text-center'><Latex>{expresiones5[11]}</Latex></h3>
                 </div>
+                <div className='flex flex-col items-center'>
+                <h3 className='text-[30px] font-semibold '>Video</h3>
+                <iframe
+                  width="420"
+                  height="240"
+                  src="https://www.youtube.com/embed/F4NrlZpANKc"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen>
+                </iframe>
+              </div>
               </div>
             </div>
           </div>
@@ -430,6 +486,18 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 px-3'>La subsecuencia <Latex>{expresiones6[25]}</Latex> converge a 1.</h3>
                 <h3 className='text-[17px] mt-3 px-3' >La subsecuencia <Latex>{expresiones6[26]}</Latex> converge a -1.</h3>
                 <h3 className='text-[17px] mt-3'>Aunque <Latex>{expresiones6[21]}</Latex> no converge, tiene subsecuencias que sí lo hacen, cumpliendo el Teorema de Bolzano-Weierstrass.</h3>
+              </div>
+              <div className='flex flex-col items-center'>
+                <h3 className='text-[30px] font-semibold '>Video</h3>
+                <iframe
+                  width="420"
+                  height="240"
+                  src="https://www.youtube.com/embed/Ggro0sCkG2U"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen>
+                </iframe>
               </div>
             </div>
           </div>
@@ -488,6 +556,18 @@ const Aprende: React.FC = () => {
                   <h3 className='text-[17px] mt-3 px-6 text-center'><Latex>{expresiones7[17]}</Latex>  y  <Latex>{expresiones7[18]}</Latex></h3>
                   <h3 className='text-[15px] mt-3 px-6'>Los límites laterales no son iguales, por lo tanto, hay una discontinuidad de salto en <Latex>{expresiones7[12]}</Latex>.</h3>
                 </div>
+                <div className='flex flex-col items-center'>
+                <h3 className='text-[30px] font-semibold '>Video</h3>
+                <iframe
+                  width="420"
+                  height="240"
+                  src="https://www.youtube.com/embed/sHuqCyEVNCs"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen>
+                </iframe>
+              </div>
               </div>
             </div>
           </div>
@@ -546,6 +626,18 @@ const Aprende: React.FC = () => {
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[15]}</Latex></h3>
                 <h3 className='text-[17px] mt-3'>Para <Latex>{expresiones8[16]}</Latex>:</h3>
                 <h3 className='text-[17px] mt-3 text-center'><Latex>{expresiones8[17]}</Latex></h3>
+              </div>
+              <div className='flex flex-col items-center'>
+                <h3 className='text-[30px] font-semibold '>Video</h3>
+                <iframe
+                  width="420"
+                  height="240"
+                  src="https://www.youtube.com/embed/JyRQzZSjCJg"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen>
+                </iframe>
               </div>
             </div>
           </div>

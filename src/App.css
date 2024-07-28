@@ -22,3 +22,15 @@
   .flip-card-inner:hover {
     transform: rotateY(180deg);
   }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin {
+    animation: spin 10s linear infinite;
+  }
